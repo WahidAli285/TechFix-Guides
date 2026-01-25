@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Access Is Denied Error While Installing Software</title>
+
+<meta name="description" content="Learn how to fix Access Is Denied error while installing software on Windows. Use admin rights, disable antivirus, check folder permissions, and fix Windows Installer issues.">
+<meta name="keywords" content="access is denied, software installation error, fix access denied, windows installer access denied">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Windows</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix “Access Is Denied” Error While Installing Software</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      “Access is denied” during installation usually happens because Windows is blocking the installer due to missing permissions, antivirus protection, or restricted folder permissions.
+      The easiest fix is to run the installer as administrator, temporarily disable antivirus, and ensure you have full access to the installation folder.  
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Does “Access Is Denied” Error Occur?</h2>
+    <p>
+      When Windows blocks an installer, it means the system doesn’t allow the setup file to write files or modify system folders. This can happen for many reasons, but the most common are:
+    </p>
+    <ul>
+      <li><strong>Not running installer as admin</strong></li>
+      <li><strong>File is blocked by antivirus</strong></li>
+      <li><strong>Permissions are restricted</strong></li>
+      <li><strong>Corrupted installer file</strong></li>
+      <li><strong>Windows Installer service issues</strong></li>
+    </ul>
+
+    <p>
+      The good news is that this error is mostly fixable without reinstalling Windows or losing data.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Run Installer as Administrator</h2>
+    <p>
+      Most software needs admin rights to install system files. Running the installer as administrator usually solves the problem instantly.
+    </p>
+    <ol>
+      <li>Right-click the installer file.</li>
+      <li>Select <strong>Run as administrator</strong>.</li>
+      <li>If it works, continue installation normally.</li>
+      <li>For permanent fix: Right-click → Properties → Compatibility → Check <strong>Run this program as administrator</strong>.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Disable Antivirus / Windows Defender Temporarily</h2>
+    <p>
+      Antivirus programs sometimes block installers because they are not digitally signed or are from unknown sources.
+    </p>
+    <ol>
+      <li>Open your antivirus app.</li>
+      <li>Disable real-time protection temporarily.</li>
+      <li>Try installing again.</li>
+      <li>After installation, enable antivirus again.</li>
+    </ol>
+    <p>
+      If you use Windows Defender:
+      <br><strong>Settings → Privacy & security → Windows Security → Virus & threat protection → Manage settings → Turn off Real-time protection.</strong>
+    </p>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Check Folder Permissions</h2>
+    <p>
+      If the installer is trying to write files in a restricted folder, Windows will block it and show “Access is denied”.
+    </p>
+    <ol>
+      <li>Right-click the installation folder (e.g., <strong>C:\Program Files</strong>).</li>
+      <li>Select <strong>Properties → Security</strong>.</li>
+      <li>Click <strong>Edit</strong> and select your username.</li>
+      <li>Check <strong>Full control</strong> and apply changes.</li>
+    </ol>
+    <p>
+      This is especially common if you are installing software to a custom folder or external drive.
+    </p>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Unblock the Installer File</h2>
+    <p>
+      If you downloaded the installer from the internet, Windows may block it automatically.
+    </p>
+    <ol>
+      <li>Right-click the installer file.</li>
+      <li>Select <strong>Properties</strong>.</li>
+      <li>At the bottom, click <strong>Unblock</strong> (if available).</li>
+      <li>Click <strong>Apply</strong> and try installing again.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Restart Windows Installer Service</h2>
+    <p>
+      If Windows Installer is not working properly, it can cause access denied errors.
+    </p>
+    <ol>
+      <li>Press <strong>Windows + R</strong> → type <strong>services.msc</strong> → Enter.</li>
+      <li>Find <strong>Windows Installer</strong>.</li>
+      <li>Right-click → <strong>Restart</strong>.</li>
+      <li>Try installing again.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Do I need admin rights to install all software?</h3>
+    <p>
+      Most apps require admin rights to install system files. If you don’t have admin rights, ask the PC owner or IT admin.
+    </p>
+
+    <h3>Is it safe to disable antivirus during installation?</h3>
+    <p>
+      Yes, but only temporarily and only for trusted software. Always enable antivirus after installation.
+    </p>
+
+    <h3>Can a corrupted installer cause access denied?</h3>
+    <p>
+      Yes. If the installer file is corrupted, Windows may fail to extract files and show access denied. Download again from the official site.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="howto1.html"> Install Software on Windows 10 & 11</a></li>
+      <li><a href="software6.html">Fix “This App Can’t Run on Your PC” Error</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

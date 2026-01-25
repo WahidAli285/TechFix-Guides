@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Slow Internet Speed</title>
+
+<meta name="description" content="Slow internet speed? Learn proven fixes to improve Wi-Fi speed, optimize router settings, and troubleshoot ISP issues for Windows PC and mobile devices.">
+<meta name="keywords" content="slow internet speed, slow wifi, internet speed fix, improve wifi speed, slow internet windows">
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Internet</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix Slow Internet Speed</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      Slow internet speed can be caused by weak Wi-Fi signal, overloaded network, outdated router,
+      ISP throttling, or wrong DNS settings. The fastest fix is to restart the router, move closer to
+      the router, update router firmware, and run speed test to compare results. In most cases,
+      changing DNS and optimizing Wi-Fi channels can improve speed instantly.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Internet Speed Becomes Slow?</h2>
+    <p>
+      Your internet speed depends on three factors: the plan you pay for, the router performance,
+      and the device connection quality. Slow speed is usually not because of Windows but because of
+      Wi-Fi interference, many devices using the same network, or weak signal.
+    </p>
+
+    <p>
+      Sometimes the issue is from your ISP (Internet Service Provider). They may be facing network
+      congestion or may throttle your speed. The key is to isolate the problem by testing different
+      devices and using wired vs wireless connection.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Restart Router and Modem</h2>
+    <p>
+      Restarting the router clears temporary issues and resets the network. It solves 60% of slow internet cases.
+    </p>
+
+    <ol>
+      <li>Turn off the router and modem.</li>
+      <li>Wait for 60 seconds.</li>
+      <li>Turn on the modem first.</li>
+      <li>After 2 minutes, turn on the router.</li>
+      <li>Restart your PC or phone and check speed again.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Check Wi-Fi Signal Strength</h2>
+    <p>
+      Weak Wi-Fi signal reduces speed drastically. If your device is far away or blocked by walls,
+      the speed drops.
+    </p>
+
+    <ul>
+      <li>Move closer to the router.</li>
+      <li>Avoid thick walls and metal objects.</li>
+      <li>Place router at a higher position (table or shelf).</li>
+      <li>Use a Wi-Fi extender if the house is large.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Disconnect Unnecessary Devices</h2>
+    <p>
+      Many devices connected to the same Wi-Fi consume bandwidth. Streaming, downloading, and gaming
+      can reduce speed for everyone.
+    </p>
+
+    <ol>
+      <li>Open your router settings (usually 192.168.1.1 or 192.168.0.1).</li>
+      <li>Check connected devices.</li>
+      <li>Disconnect devices not in use.</li>
+      <li>Enable QoS (Quality of Service) to prioritize your PC or phone.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Change Wi-Fi Channel (Reduce Interference)</h2>
+    <p>
+      If many routers in your area use the same channel, Wi-Fi interference occurs and speed drops.
+    </p>
+
+    <ol>
+      <li>Open router settings.</li>
+      <li>Go to Wi-Fi settings.</li>
+      <li>Change channel to <strong>1, 6, or 11</strong> (for 2.4GHz).</li>
+      <li>For 5GHz, choose a less crowded channel.</li>
+    </ol>
+
+    <p>
+      Use a Wi-Fi analyzer app to find the best channel for your area.
+    </p>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Use Wired Connection (Ethernet)</h2>
+    <p>
+      Wi-Fi is slower than wired connection due to interference and distance. If you need fast internet,
+      use an Ethernet cable.
+    </p>
+
+    <ol>
+      <li>Connect Ethernet cable from router to PC.</li>
+      <li>Disable Wi-Fi on PC to force Ethernet.</li>
+      <li>Run speed test again.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 6 -->
+    <h2>🔧 Fix 6: Update Router Firmware</h2>
+    <p>
+      Router firmware update fixes bugs and improves performance. Many routers slow down due to outdated firmware.
+    </p>
+
+    <ol>
+      <li>Open router settings.</li>
+      <li>Find <strong>Firmware Update</strong> or <strong>System Update</strong>.</li>
+      <li>Download the latest firmware from the manufacturer website.</li>
+      <li>Install and restart the router.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 7 -->
+    <h2>🔧 Fix 7: Change DNS Server</h2>
+    <p>
+      Slow browsing is often caused by slow DNS servers. Switching to Google DNS or Cloudflare DNS improves browsing speed.
+    </p>
+
+    <ol>
+      <li>Press <strong>Windows + R</strong>, type <strong>ncpa.cpl</strong> and press Enter.</li>
+      <li>Right-click your Wi-Fi/Ethernet → Properties.</li>
+      <li>Select <strong>Internet Protocol Version 4 (TCP/IPv4)</strong> → Properties.</li>
+      <li>Select <strong>Use the following DNS server addresses</strong>.</li>
+      <li>Use: <strong>1.1.1.1</strong> and <strong>1.0.0.1</strong> (Cloudflare).</li>
+      <li>Click OK and restart PC.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Is slow internet due to Windows or ISP?</h3>
+    <p>
+      Slow speed is usually due to ISP or Wi-Fi signal. Test speed using a wired connection to confirm.
+      If wired speed is good, the issue is Wi-Fi or router.
+    </p>
+
+    <h3>How can I check my internet speed?</h3>
+    <p>
+      Use websites like Speedtest.net or Fast.com. Compare results with your subscribed plan.
+      If speed is much lower, contact your ISP.
+    </p>
+
+    <h3>What is the best Wi-Fi band for speed?</h3>
+    <p>
+      5GHz band gives faster speed but shorter range. Use 5GHz for devices near the router.
+      Use 2.4GHz for long distance and better coverage.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="window5.html">Fix Windows 10/11 Wi-Fi Problems</a></li>
+      <li><a href="internet8.html">Fix Limited Connectivity Error</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

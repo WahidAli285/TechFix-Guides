@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix PC Automatically Restarting Problem</title>
+
+<meta name="description" content="PC automatically restarting again and again? Learn how to fix automatic restart issues caused by overheating, faulty drivers, power problems, and system errors.">
+<meta name="keywords" content="pc automatically restarting, computer keeps restarting, fix automatic restart pc, windows restart problem, pc reboot loop">
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix PC Automatically Restarting Problem (Complete Guide)</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+If your PC is automatically restarting again and again, the most common causes are
+overheating, faulty or incompatible drivers, corrupted system files, power supply
+issues, or incorrect Windows settings. You can fix this by checking temperatures,
+updating drivers, disabling automatic restart, and repairing Windows system errors.
+</p>
+
+<hr>
+
+<h2>❓ Why Does My PC Keep Restarting Automatically?</h2>
+<p>
+An automatically restarting PC can be alarming, especially when it happens without
+warning. In some cases, Windows restarts immediately after startup, while in others
+it reboots randomly during normal usage.
+</p>
+
+<p>
+This problem is often triggered by hardware safety mechanisms, such as overheating,
+or by software issues like driver crashes and system file corruption. Windows may
+restart to protect your hardware from damage.
+</p>
+
+<p>
+Understanding the root cause is essential to applying the correct fix and preventing
+future restarts.
+</p>
+
+<hr>
+
+<h2>🔍 Identify When the Restart Happens</h2>
+<p>
+Pay attention to when your PC restarts:
+</p>
+
+<ul>
+  <li>During startup or boot</li>
+  <li>While gaming or heavy usage</li>
+  <li>After Windows update</li>
+  <li>Randomly when idle</li>
+</ul>
+
+<p>
+This helps determine whether the issue is related to hardware stress, drivers, or
+system configuration.
+</p>
+
+<hr>
+
+<h2>🌡 Fix 1: Check for Overheating</h2>
+<p>
+Overheating is one of the most common reasons a PC restarts automatically. When the
+CPU or GPU temperature rises beyond safe limits, the system shuts down or restarts
+to prevent damage.
+</p>
+
+<h3>How to Reduce Overheating</h3>
+<ul>
+  <li>Clean dust from fans and vents</li>
+  <li>Ensure proper airflow around the PC</li>
+  <li>Replace old thermal paste</li>
+  <li>Use a cooling pad (for laptops)</li>
+</ul>
+
+<p>
+If restarts happen during gaming or heavy tasks, overheating is very likely the cause.
+</p>
+
+<hr>
+
+<h2>🔌 Fix 2: Check Power Supply and Power Settings</h2>
+<p>
+A faulty power supply unit (PSU) or unstable power source can cause sudden restarts,
+especially in desktop PCs.
+</p>
+
+<h3>What to Check</h3>
+<ul>
+  <li>Loose power cables</li>
+  <li>Damaged power cords</li>
+  <li>Using an unreliable extension board</li>
+</ul>
+
+<p>
+Laptop users should test with the original charger only.
+</p>
+
+<hr>
+
+<h2>🔄 Fix 3: Disable Automatic Restart in Windows</h2>
+<p>
+Windows is set to automatically restart when a critical error occurs. Disabling this
+option helps identify the exact error message.
+</p>
+
+<ol>
+  <li>Right-click <strong>This PC</strong> → Properties</li>
+  <li>Select <strong>Advanced system settings</strong></li>
+  <li>Under Startup and Recovery, click <strong>Settings</strong></li>
+  <li>Uncheck <strong>Automatically restart</strong></li>
+  <li>Click OK</li>
+</ol>
+
+<p>
+After disabling, Windows may show a blue screen error instead of restarting.
+</p>
+
+<hr>
+
+<h2>🧩 Fix 4: Update or Roll Back Faulty Drivers</h2>
+<p>
+Faulty or incompatible drivers can crash the system and cause automatic restarts.
+This often happens after Windows or driver updates.
+</p>
+
+<h3>Update Drivers</h3>
+<ol>
+  <li>Open <strong>Device Manager</strong></li>
+  <li>Right-click a device</li>
+  <li>Select <strong>Update driver</strong></li>
+</ol>
+
+<h3>Roll Back Drivers</h3>
+<ol>
+  <li>Open device properties</li>
+  <li>Go to <strong>Driver</strong> tab</li>
+  <li>Select <strong>Roll Back Driver</strong></li>
+</ol>
+
+<p>
+Focus on graphics, chipset, and network drivers first.
+</p>
+
+<hr>
+
+<h2>🧪 Fix 5: Check for System File Errors</h2>
+<p>
+Corrupted Windows system files can lead to instability and unexpected restarts.
+</p>
+
+<h3>Run System File Checker</h3>
+<ol>
+  <li>Open Command Prompt as administrator</li>
+  <li>Type <strong>sfc /scannow</strong></li>
+  <li>Press Enter</li>
+</ol>
+
+<h3>Run DISM Tool</h3>
+<ol>
+  <li>Type <strong>DISM /Online /Cleanup-Image /RestoreHealth</strong></li>
+  <li>Press Enter</li>
+</ol>
+
+<hr>
+
+<h2>🦠 Fix 6: Scan for Malware</h2>
+<p>
+Malware can cause system crashes, forced restarts, and instability.
+</p>
+
+<ol>
+  <li>Open <strong>Windows Security</strong></li>
+  <li>Run a <strong>Full Scan</strong></li>
+  <li>Remove detected threats</li>
+</ol>
+
+<p>
+Restart the PC after cleaning.
+</p>
+
+<hr>
+
+<h2>💾 Fix 7: Check RAM and Hardware Issues</h2>
+<p>
+Faulty RAM can cause random restarts without warning.
+</p>
+
+<h3>Test Memory</h3>
+<ul>
+  <li>Press <strong>Windows + R</strong>, type <strong>mdsched</strong></li>
+  <li>Restart and scan memory</li>
+</ul>
+
+<p>
+If errors are found, replacing the faulty RAM is recommended.
+</p>
+
+<hr>
+
+<h2>🔄 Fix 8: Uninstall Problematic Software</h2>
+<p>
+Some software, especially system utilities and overclocking tools, can destabilize
+Windows.
+</p>
+
+<ul>
+  <li>Uninstall recently added programs</li>
+  <li>Remove third-party driver utilities</li>
+  <li>Disable overclocking tools</li>
+</ul>
+
+<hr>
+
+<h2>🔁 Fix 9: Update Windows</h2>
+<p>
+Windows updates often include bug fixes and stability improvements.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → Windows Update</strong></li>
+  <li>Check for updates</li>
+  <li>Install all pending updates</li>
+</ol>
+
+<hr>
+
+<h2>🛠 When Automatic Restart Is Hardware-Related</h2>
+<p>
+If none of the software fixes work, hardware failure may be the cause.
+</p>
+
+<ul>
+  <li>Failing power supply</li>
+  <li>Overheating CPU or GPU</li>
+  <li>Damaged motherboard</li>
+</ul>
+
+<p>
+Professional diagnosis is recommended in these cases.
+</p>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Why does my PC restart without warning?</h3>
+<p>
+This usually happens due to overheating, power issues, or driver crashes.
+</p>
+
+<h3>Can faulty drivers cause restart loops?</h3>
+<p>
+Yes, incompatible or corrupted drivers are a common cause.
+</p>
+
+<h3>Is automatic restart dangerous?</h3>
+<p>
+Repeated restarts can damage hardware if overheating or power issues persist.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="laptop2.html">How to Fix PC Freezing or Hanging</a></li>
+  <li><a href="android7.html">Fix Android Camera Not Working</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides provides step-by-step tutorials and troubleshooting guides
+        to help you fix common tech problems and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

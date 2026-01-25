@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Stay Safe from Phishing Attacks</title>
+
+<meta name="description" content="Learn how to stay safe from phishing attacks with email vigilance, link verification, antivirus protection, two-factor authentication, and best security practices.">
+<meta name="keywords" content="phishing attacks, email scams, online security, prevent phishing, internet safety, cybersecurity tips">
+
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Security</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Stay Safe from Phishing Attacks</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Phishing attacks are fraudulent attempts to steal sensitive information such as passwords, credit card details, or personal data by pretending to be a trustworthy source. Staying safe requires a combination of email vigilance, link verification, multi-factor authentication, strong passwords, antivirus protection, and educating yourself about the latest phishing tactics.
+</p>
+
+<hr>
+
+<h2>❓ What is a Phishing Attack?</h2>
+<p>
+Phishing attacks are a form of cybercrime where attackers pose as legitimate entities to trick users into revealing confidential information. Common examples include fake emails, malicious links, cloned websites, and social engineering messages. These attacks often appear urgent or enticing to manipulate the victim into clicking or providing sensitive data.
+</p>
+
+<hr>
+
+<h2>🔒 Tip 1: Recognize Phishing Emails</h2>
+<ul>
+  <li>Check the sender’s email address carefully – phishing emails often come from slightly altered domains.</li>
+  <li>Look for spelling errors, grammatical mistakes, or suspicious formatting.</li>
+  <li>Be wary of urgent messages demanding immediate action.</li>
+  <li>Do not click links or download attachments from unknown senders.</li>
+</ul>
+
+<hr>
+
+<h2>🔑 Tip 2: Verify Website URLs</h2>
+<p>
+Fake websites often mimic real ones to steal login credentials or financial information. Always verify URLs before entering sensitive data.
+</p>
+<ul>
+  <li>Hover over links to see the real destination before clicking.</li>
+  <li>Look for HTTPS and a valid padlock icon in the browser address bar.</li>
+  <li>Type the website address directly into the browser instead of clicking links in emails.</li>
+</ul>
+
+<hr>
+
+<h2>🛡 Tip 3: Use Multi-Factor Authentication (MFA)</h2>
+<p>
+Even if attackers steal your password, MFA adds an extra layer of protection.
+</p>
+<ul>
+  <li>Enable MFA on all accounts that support it, including email, banking, and social media.</li>
+  <li>Use authenticator apps or hardware tokens instead of SMS codes when possible.</li>
+</ul>
+
+<hr>
+
+<h2>⚠️ Tip 4: Keep Antivirus and Anti-Malware Updated</h2>
+<ul>
+  <li>Install reliable antivirus software with real-time protection.</li>
+  <li>Perform regular scans to detect phishing websites or malware that may be installed via phishing links.</li>
+  <li>Keep virus definitions up-to-date to ensure new threats are blocked.</li>
+</ul>
+
+<hr>
+
+<h2>🌐 Tip 5: Educate Yourself and Stay Informed</h2>
+<p>
+Cybercriminals constantly evolve their tactics. Awareness is your first defense.
+</p>
+<ul>
+  <li>Read about common phishing methods such as spear phishing, clone phishing, and whaling attacks.</li>
+  <li>Watch out for fake login pages or pop-ups requesting sensitive information.</li>
+  <li>Attend online security workshops or subscribe to cybersecurity news updates.</li>
+</ul>
+
+<hr>
+
+<h2>💻 Tip 6: Use a Password Manager</h2>
+<p>
+Password managers reduce the risk of phishing attacks by generating and storing strong, unique passwords for each account.
+</p>
+<ul>
+  <li>Avoid reusing passwords across multiple accounts.</li>
+  <li>Do not store passwords in browsers; use dedicated password manager software.</li>
+  <li>Ensure the password manager itself is protected with a strong master password and MFA.</li>
+</ul>
+
+<hr>
+
+<h2>📌 Tip 7: Regularly Monitor Accounts</h2>
+<p>
+Early detection of suspicious activity can prevent further damage.
+</p>
+<ul>
+  <li>Check bank and credit card statements for unauthorized transactions.</li>
+  <li>Review login activity for email and social media accounts.</li>
+  <li>Enable notifications for account changes or login attempts.</li>
+</ul>
+
+<hr>
+
+<h2>🔧 Tip 8: Use Browser Security Features</h2>
+<ul>
+  <li>Enable phishing and malware protection in browsers like Chrome, Edge, or Firefox.</li>
+  <li>Use ad-blockers and script blockers to reduce exposure to malicious content.</li>
+  <li>Keep browsers updated to patch security vulnerabilities.</li>
+</ul>
+
+<hr>
+
+<h2>💡 Tip 9: Avoid Sharing Sensitive Information Publicly</h2>
+<ul>
+  <li>Do not post personal details, login credentials, or financial information on social media.</li>
+  <li>Be cautious when sharing personal data in forums or websites.</li>
+  <li>Consider limiting privacy settings on social networks to reduce exposure.</li>
+</ul>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>How can I identify a phishing email quickly?</h3>
+<p>
+Check the sender, URL, and look for signs of urgency, spelling mistakes, or unexpected attachments. When in doubt, do not click links or respond.
+</p>
+
+<h3>Can phishing attacks be prevented completely?</h3>
+<p>
+While no solution is 100% foolproof, combining email vigilance, MFA, antivirus protection, and education drastically reduces the risk.
+</p>
+
+<h3>What should I do if I fall victim to phishing?</h3>
+<p>
+Change your passwords immediately, enable MFA, alert your bank if financial data is compromised, and report the phishing attempt to relevant authorities or your IT department.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="howto5.html"> Improve Software Performance and Speed on Windows PC</a></li>
+  <li><a href="tech4.html">How to Secure Your Laptop from Unauthorized Access</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

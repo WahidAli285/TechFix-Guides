@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Internet Dropping Frequently</title>
+
+<meta name="description" content="Internet dropping frequently? Learn simple fixes like updating firmware, resetting router, changing DNS, checking cable, and more.">
+<meta name="keywords" content="internet dropping frequently, wifi disconnecting, internet keeps disconnecting, fix intermittent internet">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Internet</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix Internet Dropping Frequently</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      If your internet keeps dropping frequently, the problem is usually caused by router firmware issues,
+      weak Wi-Fi signal, loose cables, or ISP instability. Fix it by restarting the router, updating firmware,
+      checking cables, switching frequency band, and resetting network settings.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Does Internet Drop Frequently?</h2>
+    <p>
+      Frequent internet drops happen when your device loses connection to the router or the router loses
+      connection to the internet. This can happen due to hardware issues, outdated firmware, Wi-Fi interference,
+      or ISP problems.
+    </p>
+
+    <p>
+      In many cases, the Wi-Fi signal is weak due to distance or walls, or the router overheating causes
+      frequent restarts. Sometimes, your ISP may be throttling or facing outages.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Restart Router and Modem</h2>
+    <p>
+      This is the easiest and most effective fix. Restarting clears temporary glitches and reconnects the devices.
+    </p>
+    <ol>
+      <li>Turn off your PC/phone.</li>
+      <li>Unplug the router and modem from power.</li>
+      <li>Wait 60 seconds.</li>
+      <li>Plug the modem back in first, wait 2 minutes.</li>
+      <li>Plug the router back in and wait another 2 minutes.</li>
+      <li>Turn on your device and check the connection.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Check Router Cables & Ports</h2>
+    <p>
+      Loose or damaged cables cause frequent drops. Check all connections carefully.
+    </p>
+    <ul>
+      <li>Check the Ethernet cable between modem and router.</li>
+      <li>Check the power cable for damage or loose connection.</li>
+      <li>If using Ethernet to PC, try a new cable.</li>
+      <li>Try a different LAN port on the router.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Update Router Firmware</h2>
+    <p>
+      Outdated firmware can cause instability and frequent disconnects. Updating firmware can fix bugs.
+    </p>
+    <ol>
+      <li>Open router settings in browser (usually <strong>192.168.1.1</strong> or <strong>192.168.0.1</strong>).</li>
+      <li>Login with admin credentials.</li>
+      <li>Go to <strong>Firmware Update</strong> or <strong>System</strong>.</li>
+      <li>Click <strong>Check for Updates</strong> and install.</li>
+      <li>Restart router after update.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Switch Wi-Fi Band (2.4GHz / 5GHz)</h2>
+    <p>
+      Many routers support both 2.4GHz and 5GHz. Switching bands can stabilize the connection.
+    </p>
+    <ul>
+      <li>2.4GHz: better range, more interference.</li>
+      <li>5GHz: faster speed, less range, less interference.</li>
+      <li>If your device is far from router, use 2.4GHz.</li>
+      <li>If you have interference, use 5GHz.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Reset Network Settings</h2>
+    <p>
+      Resetting network settings fixes corrupted network configuration and IP conflicts.
+    </p>
+    <ol>
+      <li>Open <strong>Settings → Network & Internet → Status</strong>.</li>
+      <li>Scroll down and click <strong>Network reset</strong>.</li>
+      <li>Click <strong>Reset now</strong> and restart PC.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Why does my internet keep disconnecting only at night?</h3>
+    <p>
+      This can be due to ISP maintenance, router overheating, or Wi-Fi interference from neighbors.
+    </p>
+
+    <h3>Is my router faulty if internet keeps dropping?</h3>
+    <p>
+      If you’ve checked cables, updated firmware, and still face drops, the router may be faulty.
+    </p>
+
+    <h3>Should I contact ISP for frequent drops?</h3>
+    <p>
+      Yes, especially if the drops happen even with wired Ethernet. ISP may have line issues or outages.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="internet9.html">Fix Internet Proxy Errors</a></li>
+      <li><a href="howto9.html">How to Keep Your System Safe While Downloading Software</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

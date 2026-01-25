@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Laptop Touchpad Not Working</title>
+
+<meta name="description" content="Laptop touchpad not working? Learn step-by-step fixes including touchpad settings, driver updates, and function key solutions to restore touchpad functionality.">
+<meta name="keywords" content="laptop touchpad not working, fix touchpad issue, touchpad driver update, enable touchpad, laptop trackpad problem">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Laptop</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix Laptop Touchpad Not Working (Complete Guide)</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+If your laptop touchpad is not working, the most common reasons are disabled touchpad
+settings, outdated or missing drivers, accidental function key presses, or software
+conflicts. You can usually fix the problem by enabling the touchpad in settings,
+updating drivers, and checking the function key combination.
+</p>
+
+<hr>
+
+<h2>❓ Why Is My Laptop Touchpad Not Working?</h2>
+<p>
+A non-working touchpad can make a laptop almost unusable, especially if you do not
+have an external mouse available. Many users experience this issue suddenly after
+a Windows update, driver installation, or accidentally pressing a keyboard shortcut.
+</p>
+
+<p>
+In most cases, the touchpad hardware is fine, and the problem is caused by incorrect
+settings or driver issues. Understanding the root cause will help you fix the issue
+quickly without unnecessary repairs.
+</p>
+
+<hr>
+
+<h2>🔍 Determine If the Issue Is Hardware or Software</h2>
+<p>
+Before applying fixes, identify whether the touchpad issue is hardware-related.
+</p>
+
+<ul>
+  <li>Connect an external USB mouse</li>
+  <li>Check if the touchpad works in BIOS</li>
+  <li>Test in Safe Mode</li>
+</ul>
+
+<p>
+If the touchpad works in BIOS but not in Windows, the problem is software-related.
+</p>
+
+<hr>
+
+<h2>🔄 Fix 1: Restart Your Laptop</h2>
+<p>
+A temporary system glitch can disable the touchpad. Restarting the laptop often
+resolves the issue instantly.
+</p>
+
+<ol>
+  <li>Save all open files</li>
+  <li>Restart the laptop</li>
+  <li>Check if the touchpad works</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ Fix 2: Enable Touchpad in Windows Settings</h2>
+<p>
+The touchpad may be disabled in system settings, either manually or after an update.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → Bluetooth & devices → Touchpad</strong></li>
+  <li>Make sure the <strong>Touchpad</strong> toggle is turned on</li>
+  <li>Adjust sensitivity if needed</li>
+</ol>
+
+<p>
+Also check the option to keep the touchpad enabled when a mouse is connected.
+</p>
+
+<hr>
+
+<h2>⌨️ Fix 3: Check Function Key (Fn) Shortcut</h2>
+<p>
+Most laptops have a function key combination that enables or disables the touchpad.
+Accidentally pressing it can turn the touchpad off.
+</p>
+
+<h3>Common Touchpad Function Keys</h3>
+<ul>
+  <li><strong>Fn + F5</strong></li>
+  <li><strong>Fn + F7</strong></li>
+  <li><strong>Fn + F9</strong></li>
+  <li><strong>Fn + F10</strong></li>
+</ul>
+
+<p>
+Look for a key with a touchpad icon and press it while holding the Fn key.
+</p>
+
+<hr>
+
+<h2>🧩 Fix 4: Update or Reinstall Touchpad Drivers</h2>
+<p>
+Touchpad drivers allow Windows to communicate with the trackpad. Outdated or missing
+drivers can disable touchpad functionality.
+</p>
+
+<h3>Update Touchpad Driver</h3>
+<ol>
+  <li>Open <strong>Device Manager</strong></li>
+  <li>Expand <strong>Mice and other pointing devices</strong></li>
+  <li>Right-click the touchpad device</li>
+  <li>Select <strong>Update driver</strong></li>
+</ol>
+
+<h3>Reinstall Touchpad Driver</h3>
+<ol>
+  <li>Right-click the touchpad device</li>
+  <li>Select <strong>Uninstall device</strong></li>
+  <li>Restart your laptop</li>
+</ol>
+
+<p>
+Windows will reinstall the driver automatically.
+</p>
+
+<hr>
+
+<h2>🔄 Fix 5: Install Manufacturer Touchpad Drivers</h2>
+<p>
+Generic Windows drivers may not support advanced touchpad features.
+</p>
+
+<ul>
+  <li>Visit the laptop manufacturer’s website</li>
+  <li>Download Synaptics, ELAN, or Precision Touchpad drivers</li>
+  <li>Install and restart the laptop</li>
+</ul>
+
+<hr>
+
+<h2>🛡 Fix 6: Disable Conflicting Software</h2>
+<p>
+Some third-party software and utilities can interfere with touchpad input.
+</p>
+
+<ul>
+  <li>Uninstall touchpad gesture tools</li>
+  <li>Disable remote desktop applications</li>
+  <li>Check gaming software or mouse utilities</li>
+</ul>
+
+<p>
+Booting into Safe Mode can help identify software conflicts.
+</p>
+
+<hr>
+
+<h2>🔁 Fix 7: Update Windows</h2>
+<p>
+Windows updates often include fixes for touchpad issues.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → Windows Update</strong></li>
+  <li>Check for updates</li>
+  <li>Install all available updates</li>
+</ol>
+
+<hr>
+
+<h2>🧪 Fix 8: Check BIOS Settings</h2>
+<p>
+In some laptops, the touchpad can be disabled directly from BIOS.
+</p>
+
+<ul>
+  <li>Restart and enter BIOS</li>
+  <li>Look for internal pointing device option</li>
+  <li>Enable touchpad if disabled</li>
+</ul>
+
+<hr>
+
+<h2>🛠 When Touchpad Hardware Is Faulty</h2>
+<p>
+If none of the software fixes work, the touchpad may be physically damaged.
+</p>
+
+<ul>
+  <li>Loose internal ribbon cable</li>
+  <li>Liquid damage</li>
+  <li>Worn-out touchpad surface</li>
+</ul>
+
+<p>
+Professional repair or touchpad replacement may be required.
+</p>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Why does my touchpad stop working suddenly?</h3>
+<p>
+This usually happens due to driver issues or accidental function key presses.
+</p>
+
+<h3>Can Windows updates break the touchpad?</h3>
+<p>
+Yes, but updates usually fix compatibility issues in later patches.
+</p>
+
+<h3>Is using an external mouse a solution?</h3>
+<p>
+It is a temporary workaround, but fixing the touchpad is recommended.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="laptop6.html">Fix Slow Laptop Performance</a></li>
+  <li><a href="tech1.html">Essential Tech Safety Tips</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides provides step-by-step tutorials and troubleshooting guides
+        to help you fix common tech problems and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

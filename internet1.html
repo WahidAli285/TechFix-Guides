@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix No Internet Access on Windows</title>
+
+<meta name="description" content="PC shows No Internet or Limited Connectivity? Learn step-by-step fixes for Windows internet issues including DNS reset, network reset, driver update and router troubleshooting.">
+<meta name="keywords" content="no internet access windows, limited connectivity windows, fix no internet, windows network troubleshooting">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Windows</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix No Internet Access on Windows</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      If your PC shows “No Internet” or “Limited Connectivity”, the issue is usually caused by a
+      wrong network configuration, corrupted DNS cache, outdated network drivers, or a router problem.
+      The fastest fix is to restart the router, reset the network adapter, flush DNS cache, and update
+      network drivers. Most cases are solved within 10 minutes without reinstalling Windows.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Does Windows Show “No Internet” or “Limited Connectivity”?</h2>
+    <p>
+      Windows can show “No Internet” even when your router is working. This happens because Windows
+      is unable to communicate with the DNS server or the internet gateway. In some cases, the
+      network adapter fails to obtain an IP address, or the network settings get corrupted.
+    </p>
+
+    <p>
+      Common causes include outdated drivers, incorrect DNS settings, VPN conflicts, weak Wi-Fi signal,
+      or a temporary issue from your ISP. Sometimes a Windows update changes network settings, causing
+      the problem to appear suddenly.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Restart Router + PC</h2>
+    <p>
+      This is the quickest fix and works in most cases. Restarting the router clears temporary issues
+      and resets the connection.
+    </p>
+
+    <ol>
+      <li>Turn off your router and modem.</li>
+      <li>Wait 60 seconds.</li>
+      <li>Turn on the modem first, then the router.</li>
+      <li>Restart your PC.</li>
+      <li>Check if internet is working.</li>
+    </ol>
+
+    <p>
+      If your Wi-Fi signal is weak, move closer to the router or remove physical obstacles.
+    </p>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Reset Network Adapter</h2>
+    <p>
+      Resetting the network adapter removes incorrect settings and restores default network configuration.
+    </p>
+
+    <ol>
+      <li>Press <strong>Windows + I</strong> to open Settings.</li>
+      <li>Go to <strong>Network & Internet</strong>.</li>
+      <li>Scroll down and click <strong>Advanced network settings</strong>.</li>
+      <li>Click <strong>Network reset</strong>.</li>
+      <li>Click <strong>Reset now</strong> and restart your PC.</li>
+    </ol>
+
+    <p>
+      This will reinstall network adapters and reset all network settings.
+    </p>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Flush DNS Cache</h2>
+    <p>
+      DNS cache can become corrupted, causing websites not to load. Flushing DNS refreshes the cache.
+    </p>
+
+    <ol>
+      <li>Open <strong>Command Prompt as Administrator</strong>.</li>
+      <li>Type the following commands one by one:</li>
+    </ol>
+
+    <pre>
+ipconfig /flushdns
+ipconfig /release
+ipconfig /renew
+    </pre>
+
+    <p>
+      After running these commands, restart your PC and check the internet again.
+    </p>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Update Network Adapter Drivers</h2>
+    <p>
+      Outdated or corrupted drivers can cause network failure. Updating drivers often fixes the issue.
+    </p>
+
+    <ol>
+      <li>Press <strong>Windows + X</strong> and open <strong>Device Manager</strong>.</li>
+      <li>Expand <strong>Network adapters</strong>.</li>
+      <li>Right-click your Wi-Fi or Ethernet adapter.</li>
+      <li>Click <strong>Update driver</strong> → <strong>Search automatically</strong>.</li>
+      <li>Restart your PC after update.</li>
+    </ol>
+
+    <p>
+      If updating doesn’t work, uninstall the driver and restart Windows. Windows will reinstall the driver automatically.
+    </p>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Set DNS to Google DNS</h2>
+    <p>
+      Sometimes your ISP DNS is slow or down. Switching to Google DNS can solve “No Internet” issues.
+    </p>
+
+    <ol>
+      <li>Press <strong>Windows + R</strong>, type <strong>ncpa.cpl</strong> and press Enter.</li>
+      <li>Right-click your network connection → <strong>Properties</strong>.</li>
+      <li>Select <strong>Internet Protocol Version 4 (TCP/IPv4)</strong> → <strong>Properties</strong>.</li>
+      <li>Select <strong>Use the following DNS server addresses</strong>.</li>
+      <li>Enter: <strong>8.8.8.8</strong> and <strong>8.8.4.4</strong>.</li>
+      <li>Click OK and restart your PC.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Why does Windows show “Limited Connectivity”?</h3>
+    <p>
+      Limited connectivity means Windows connected to the router but cannot access the internet.
+      It happens due to incorrect DNS, missing IP address, or router issues.
+    </p>
+
+    <h3>How do I check if my internet is working?</h3>
+    <p>
+      Check other devices (phone, tablet). If other devices work, the issue is with your PC.
+      You can also open <strong>Command Prompt</strong> and run <strong>ping 8.8.8.8</strong>.
+    </p>
+
+    <h3>Do I need to reinstall Windows?</h3>
+    <p>
+      No. Most “No Internet” issues are fixed with network reset, DNS flush, or driver update.
+      Reinstalling Windows is rarely needed.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="internet9.html">Fix Internet Proxy Errors</a></li>
+      <li><a href="software2.html">Fix Application Not Opening </a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

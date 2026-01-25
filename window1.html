@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Windows Update Stuck at 0%, 20%, or 100%</title>
+
+<meta name="description" content="Windows Update stuck at 0%, 20% or 100%? Learn simple step-by-step fixes to resolve Windows Update issues without data loss.">
+<meta name="keywords" content="windows update stuck, windows update not downloading, fix windows update error">
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <!-- ARTICLE CARD -->
+
+  <div class="tutorial">
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix Windows Update Stuck at 0%, 20%, or 100%</h1>
+
+<!-- QUICK ANSWER -->
+<h2>✅ Quick Answer</h2>
+<p>
+  If your Windows Update is stuck at 0%, 20%, or 100%, the issue is usually caused by
+  corrupted update files, background services not running, insufficient disk space,
+  or temporary internet interruptions. In most cases, restarting Windows Update
+  services, clearing the SoftwareDistribution folder, and running the Windows Update
+  Troubleshooter fixes the problem without data loss.
+</p>
+
+<hr>
+
+<!-- PROBLEM EXPLANATION -->
+<h2>❓ Why Does Windows Update Get Stuck?</h2>
+<p>
+  Windows Updates are essential for system security and performance, but they don’t
+  always work smoothly. Many users report Windows Update freezing at certain
+  percentages such as 0%, 20%, 45%, or even 100%. When this happens, Windows may appear
+  unresponsive for hours, causing frustration and concern.
+</p>
+
+<p>
+  The most common reasons behind a stuck Windows Update include incomplete update
+  downloads, corrupted system files, outdated drivers, antivirus conflicts, or
+  interrupted internet connections. Sometimes, Windows Update services fail silently
+  in the background, making it seem like nothing is happening.
+</p>
+
+<p>
+  The good news is that most Windows Update issues are software-related and can be
+  fixed safely without reinstalling Windows or losing personal files.
+</p>
+
+<hr>
+
+<!-- FIX 1 -->
+<h2>🔧 Fix 1: Restart Windows Update Services</h2>
+<p>
+  Restarting Windows Update services refreshes the update process and clears temporary
+  glitches that cause updates to freeze.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>services.msc</strong>, and press Enter.</li>
+  <li>Find <strong>Windows Update</strong> in the list.</li>
+  <li>Right-click it and choose <strong>Restart</strong>.</li>
+  <li>Do the same for <strong>Background Intelligent Transfer Service (BITS)</strong>.</li>
+  <li>Close the window and try updating again.</li>
+</ol>
+
+<p><strong>Screenshot:</strong> Windows Services panel showing Windows Update service.</p>
+
+<hr>
+
+<!-- FIX 2 -->
+<h2>🔧 Fix 2: Run Windows Update Troubleshooter</h2>
+<p>
+  Microsoft includes a built-in troubleshooter designed specifically to detect and
+  fix Windows Update problems automatically.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → System → Troubleshoot</strong>.</li>
+  <li>Click <strong>Other troubleshooters</strong>.</li>
+  <li>Find <strong>Windows Update</strong> and click <strong>Run</strong>.</li>
+  <li>Follow the on-screen instructions.</li>
+</ol>
+
+<p>
+  This tool checks for common issues such as missing services, corrupted files, and
+  incorrect permissions.
+</p>
+
+<hr>
+
+<!-- FIX 3 -->
+<h2>🔧 Fix 3: Clear SoftwareDistribution Folder</h2>
+<p>
+  The SoftwareDistribution folder stores temporary update files. If these files
+  become corrupted, updates may get stuck.
+</p>
+
+<ol>
+  <li>Open <strong>Command Prompt as Administrator</strong>.</li>
+  <li>Type the following commands one by one:</li>
+</ol>
+
+<pre>
+```
+
+net stop wuauserv
+net stop bits </pre>
+
+```
+<ol start="3">
+  <li>Go to <strong>C:\Windows\SoftwareDistribution</strong>.</li>
+  <li>Delete all files inside the folder.</li>
+  <li>Restart services using:</li>
+</ol>
+
+<pre>
+```
+
+net start wuauserv
+net start bits </pre>
+
+```
+<p>
+  Restart your PC and check for updates again.
+</p>
+
+<hr>
+
+<!-- FIX 4 -->
+<h2>🔧 Fix 4: Check Disk Space and Internet</h2>
+<p>
+  Windows Updates require sufficient free disk space and a stable internet
+  connection.
+</p>
+
+<ul>
+  <li>Ensure at least <strong>20 GB</strong> of free space on your system drive.</li>
+  <li>Disconnect VPNs temporarily.</li>
+  <li>Switch to a stable Wi-Fi or wired connection.</li>
+</ul>
+
+<p>
+  A weak or unstable internet connection can make Windows appear stuck even when it
+  is still downloading updates in the background.
+</p>
+
+<hr>
+
+<!-- FIX 5 -->
+<h2>🔧 Fix 5: Perform a Clean Restart</h2>
+<p>
+  Third-party antivirus or startup programs sometimes interfere with Windows Update.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong> and type <strong>msconfig</strong>.</li>
+  <li>Go to the <strong>Services</strong> tab.</li>
+  <li>Check <strong>Hide all Microsoft services</strong>.</li>
+  <li>Click <strong>Disable all</strong> and restart your PC.</li>
+</ol>
+
+<p>
+  After updating successfully, you can enable services again.
+</p>
+
+<hr>
+
+<!-- FAQ -->
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Is it safe to turn off my PC if Windows Update is stuck?</h3>
+<p>
+  If the update has been stuck for several hours with no disk activity, it is usually
+  safe to restart your PC. However, avoid force shutdown during active installation.
+</p>
+
+<h3>How long should Windows Update take?</h3>
+<p>
+  Most updates finish within 30–90 minutes. Feature updates may take longer depending
+  on system speed.
+</p>
+
+<h3>Will I lose my data while fixing Windows Update?</h3>
+<p>
+  No. The fixes mentioned in this guide do not delete personal files.
+</p>
+
+<hr>
+
+<!-- INTERNAL LINKS -->
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="window5.html">Fix WiFi Connected but No Internet</a></li>
+  <li><a href="android6.html">How to Speed Up a Slow Android Phone</a></li>
+</ul>
+
+<div class="tutorial-footer">
+  Last updated: January 2026 • Techfix&Guides
+</div>
+  </div>
+
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  // Default LIGHT
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

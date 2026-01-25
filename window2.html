@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Speed Up a Slow Windows PC</title>
+
+<meta name="description" content="Slow Windows PC? Learn simple step-by-step fixes like disabling startup programs, cleaning temp files, optimizing performance, and more.">
+<meta name="keywords" content="speed up windows, slow windows pc, disable startup programs, clean temp files, optimize performance">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <!-- ARTICLE CARD -->
+
+  <div class="tutorial">
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Speed Up a Slow Windows PC (Easy & Safe Tips)</h1>
+
+<!-- QUICK ANSWER -->
+<h2>✅ Quick Answer</h2>
+<p>
+  A slow Windows PC is usually caused by too many startup programs, accumulated temporary files,
+  fragmented storage, outdated drivers, and background processes consuming RAM. The quickest way
+  to speed it up is by disabling unnecessary startup apps, cleaning temporary files, optimizing
+  storage, and adjusting performance settings. These fixes are safe and do not delete your personal
+  files.
+</p>
+
+<hr>
+
+<!-- PROBLEM EXPLANATION -->
+<h2>❓ Why Is My Windows PC So Slow?</h2>
+<p>
+  If your Windows computer has started to feel sluggish, you are not alone. Over time, Windows
+  systems can slow down due to software updates, installed programs, and background tasks. Many
+  users notice slow startup, lagging apps, long loading times, and delayed response even on
+  everyday tasks like opening a browser or watching a video.
+</p>
+
+<p>
+  The most common reasons include too many programs running at startup, heavy background processes,
+  low storage space, outdated system files, and even malware. Another reason is the accumulation of
+  temporary files and cache that Windows does not clean automatically. The good news is that most
+  of these issues can be fixed quickly without reinstalling Windows.
+</p>
+
+<hr>
+
+<!-- FIX 1 -->
+<h2>🔧 Fix 1: Disable Unnecessary Startup Programs</h2>
+<p>
+  Many programs automatically start when you turn on your PC. This increases boot time and reduces
+  overall performance. Disabling unnecessary startup programs is one of the fastest ways to speed
+  up Windows.
+</p>
+
+<ol>
+  <li>Press <strong>Ctrl + Shift + Esc</strong> to open Task Manager.</li>
+  <li>Go to the <strong>Startup</strong> tab.</li>
+  <li>Look for programs with high <strong>Startup impact</strong>.</li>
+  <li>Right-click and select <strong>Disable</strong> for programs you don’t need at startup.</li>
+  <li>Restart your PC to apply changes.</li>
+</ol>
+
+<p>
+  <strong>Tip:</strong> Keep antivirus, drivers, and essential apps enabled, but disable tools like
+  update assistants, launchers, and apps you rarely use.
+</p>
+
+<p><strong>Screenshot:</strong> Task Manager Startup tab showing enabled/disabled apps.</p>
+
+<hr>
+
+<!-- FIX 2 -->
+<h2>🔧 Fix 2: Clean Temporary Files & Cache</h2>
+<p>
+  Temporary files, system cache, and leftover data from uninstalled programs can take up a lot of
+  storage and slow down your PC. Cleaning these files can free space and improve speed.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>cleanmgr</strong> and press Enter.</li>
+  <li>Select your system drive (usually C:).</li>
+  <li>Check options like <strong>Temporary files</strong>, <strong>Recycle Bin</strong>, and <strong>Thumbnails</strong>.</li>
+  <li>Click <strong>OK</strong> and then <strong>Delete Files</strong>.</li>
+  <li>For deeper cleaning, use <strong>Settings → System → Storage → Temporary files</strong>.</li>
+</ol>
+
+<p>
+  This process removes temporary files that are safe to delete and can instantly improve performance,
+  especially on older PCs.
+</p>
+
+<hr>
+
+<!-- FIX 3 -->
+<h2>🔧 Fix 3: Optimize Storage & Free Up Disk Space</h2>
+<p>
+  Windows needs free disk space to run smoothly. When your system drive is almost full, Windows slows
+  down because it has no room for virtual memory and temporary operations. Keeping at least 20–25% free
+  space helps Windows run faster.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → System → Storage</strong>.</li>
+  <li>Click <strong>Storage Sense</strong> and turn it on.</li>
+  <li>Click <strong>Configure Storage Sense or run it now</strong>.</li>
+  <li>Delete large unused files and apps.</li>
+  <li>Move media files to an external drive if needed.</li>
+</ol>
+
+<p>
+  If you have an old HDD, consider upgrading to an SSD. SSDs dramatically improve boot time and app loading.
+</p>
+
+<hr>
+
+<!-- FIX 4 -->
+<h2>🔧 Fix 4: Adjust Visual Effects for Performance</h2>
+<p>
+  Windows visual effects (animations, shadows, and transparency) look nice but can slow down older PCs.
+  Adjusting them to “best performance” can make your PC feel faster instantly.
+</p>
+
+<ol>
+  <li>Right-click <strong>This PC</strong> and select <strong>Properties</strong>.</li>
+  <li>Click <strong>Advanced system settings</strong>.</li>
+  <li>Under Performance, click <strong>Settings</strong>.</li>
+  <li>Select <strong>Adjust for best performance</strong>.</li>
+  <li>Click <strong>Apply</strong> and then <strong>OK</strong>.</li>
+</ol>
+
+<p>
+  You can also choose “Custom” and keep only a few effects if you want a balance between appearance and speed.
+</p>
+
+<hr>
+
+<!-- FIX 5 -->
+<h2>🔧 Fix 5: Update Drivers & Windows</h2>
+<p>
+  Outdated drivers or system files can cause slow performance, app crashes, and lag. Updating Windows and
+  drivers ensures everything runs smoothly and efficiently.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → Windows Update</strong>.</li>
+  <li>Click <strong>Check for updates</strong>.</li>
+  <li>Install all pending updates.</li>
+  <li>For drivers, open <strong>Device Manager</strong>.</li>
+  <li>Right-click a device → <strong>Update driver</strong>.</li>
+</ol>
+
+<p>
+  If you use a laptop, also check your manufacturer’s website for the latest drivers.
+</p>
+
+<hr>
+
+<!-- FIX 6 -->
+<h2>🔧 Fix 6: Run Disk Cleanup & Defragment (HDD Only)</h2>
+<p>
+  If your PC uses an HDD (not SSD), fragmentation can slow down read/write speed. Defragmenting helps the drive
+  work efficiently.
+</p>
+
+<ol>
+  <li>Open <strong>File Explorer</strong>.</li>
+  <li>Right-click your system drive (C:) and select <strong>Properties</strong>.</li>
+  <li>Go to <strong>Tools → Optimize</strong>.</li>
+  <li>Select the drive and click <strong>Optimize</strong>.</li>
+  <li>Repeat monthly for best results.</li>
+</ol>
+
+<p>
+  SSD users should avoid defragmentation; instead, ensure <strong>TRIM</strong> is enabled.
+</p>
+
+<hr>
+
+<!-- FAQ -->
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Why is my PC slow even though it has good specs?</h3>
+<p>
+  High specs don’t always mean fast performance. Software problems, too many background apps, outdated drivers,
+  malware, and low disk space can slow down even powerful PCs. Cleaning and optimizing can help.
+</p>
+
+<h3>Does deleting temporary files harm my PC?</h3>
+<p>
+  No. Temporary files are safe to delete. They are created by Windows and apps to store temporary data. Deleting
+  them frees space and improves speed.
+</p>
+
+<h3>Should I disable antivirus to speed up Windows?</h3>
+<p>
+  No. Antivirus protects your PC from threats. Instead, disable only unnecessary apps at startup, not security tools.
+</p>
+
+<hr>
+
+<!-- INTERNAL LINKS -->
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="window9.html">Printer Not Working</a></li>
+   <li><a href="software1.html">Common Software Fixes</a></li>
+</ul>
+
+<div class="tutorial-footer">
+  Last updated: January 2026 • Techfix&Guides
+</div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Protect Personal Data on Windows PC</title>
+
+<meta name="description" content="Learn how to protect personal data on Windows PC using encryption, passwords, backups, antivirus, and privacy settings.">
+<meta name="keywords" content="protect personal data, Windows PC security, data privacy, encryption, antivirus, backups, secure files">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Security</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Protect Personal Data on Windows PC</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Protecting your personal data on a Windows PC involves a combination of strong passwords, encryption, regular backups, antivirus protection, secure browsing habits, and privacy settings configuration. By following a comprehensive security plan, you can prevent unauthorized access, data theft, and accidental loss.
+</p>
+
+<hr>
+
+<h2>❓ Why Personal Data Security Matters</h2>
+<p>
+Personal data includes sensitive information such as financial records, login credentials, photos, and work files. If compromised, it can lead to identity theft, financial loss, privacy violations, and even legal consequences. Cybercriminals often target Windows PCs due to their popularity, making robust security measures essential for both home and professional users.
+</p>
+
+<hr>
+
+<h2>🔒 Tip 1: Use Strong Passwords and Passphrases</h2>
+<p>
+Passwords protect access to your Windows user account and sensitive files.
+</p>
+<ul>
+  <li>Create complex passwords with a combination of uppercase, lowercase, numbers, and symbols.</li>
+  <li>Use at least 12 characters for each password.</li>
+  <li>Consider using passphrases for easier recall but strong security.</li>
+  <li>Enable Windows account PIN and multi-factor authentication for added protection.</li>
+</ul>
+
+<hr>
+
+<h2>🔑 Tip 2: Enable Full Disk Encryption</h2>
+<p>
+Encrypting your data ensures that even if your PC is lost or stolen, unauthorized users cannot access your files.
+</p>
+<ul>
+  <li>Enable BitLocker for Windows Pro users or device encryption for Home users.</li>
+  <li>Encrypt external drives and USB devices to prevent data leakage.</li>
+  <li>Keep recovery keys safe and secure in case of login issues.</li>
+</ul>
+
+<hr>
+
+<h2>🛡 Tip 3: Keep Windows and Software Updated</h2>
+<p>
+Regular updates patch security vulnerabilities exploited by hackers.
+</p>
+<ul>
+  <li>Enable automatic Windows updates.</li>
+  <li>Update apps and drivers frequently.</li>
+  <li>Remove outdated software that may have unpatched vulnerabilities.</li>
+</ul>
+
+<hr>
+
+<h2>⚠️ Tip 4: Use Antivirus and Anti-Malware Protection</h2>
+<p>
+A reliable antivirus program detects and removes malware that could steal personal data.
+</p>
+<ul>
+  <li>Install reputable antivirus software with real-time protection.</li>
+  <li>Perform regular system scans to catch malware early.</li>
+  <li>Keep virus definitions up to date to counter new threats.</li>
+</ul>
+
+<hr>
+
+<h2>🌐 Tip 5: Configure Firewall and Network Security</h2>
+<p>
+Firewalls help prevent unauthorized access over the internet or local networks.
+</p>
+<ul>
+  <li>Enable Windows Firewall or third-party firewall applications.</li>
+  <li>Disable file and printer sharing on public networks.</li>
+  <li>Use a VPN when connected to untrusted Wi-Fi networks.</li>
+</ul>
+
+<hr>
+
+<h2>💻 Tip 6: Backup Your Personal Data Regularly</h2>
+<p>
+Backups protect against accidental deletion, hardware failure, or ransomware attacks.
+</p>
+<ul>
+  <li>Use cloud storage or external drives for automatic backups.</li>
+  <li>Encrypt backup data for added security.</li>
+  <li>Test backups periodically to ensure data can be restored.</li>
+</ul>
+
+<hr>
+
+<h2>🔧 Tip 7: Limit Access to Your PC</h2>
+<p>
+Only authorized individuals should be able to access your personal files.
+</p>
+<ul>
+  <li>Use separate user accounts for family or coworkers.</li>
+  <li>Apply account type restrictions: Standard user accounts instead of Administrator for daily use.</li>
+  <li>Lock your PC whenever unattended (Windows + L).</li>
+</ul>
+
+<hr>
+
+<h2>📌 Tip 8: Protect Browsing and Online Activity</h2>
+<p>
+Online threats like phishing, keyloggers, and malicious downloads can compromise your personal data.
+</p>
+<ul>
+  <li>Use browsers with built-in security features and enable tracking protection.</li>
+  <li>Avoid downloading files from untrusted sources.</li>
+  <li>Do not click suspicious links in emails or messages.</li>
+  <li>Use password managers to store login credentials securely.</li>
+</ul>
+
+<hr>
+
+<h2>🔐 Tip 9: Control Privacy Settings</h2>
+<p>
+Windows includes multiple privacy settings that control app and system access to your data.
+</p>
+<ul>
+  <li>Go to Settings → Privacy and review app permissions for camera, microphone, location, and contacts.</li>
+  <li>Disable unnecessary telemetry and ad tracking features.</li>
+  <li>Review security settings in your Microsoft account regularly.</li>
+</ul>
+
+<hr>
+
+<h2>💡 Tip 10: Physical Security Measures</h2>
+<p>
+Prevent unauthorized physical access to your PC and sensitive files.
+</p>
+<ul>
+  <li>Keep your PC in a secure location and avoid leaving it unattended in public spaces.</li>
+  <li>Use a laptop lock for portable devices.</li>
+  <li>Secure removable drives and sensitive printed documents.</li>
+</ul>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>What is the easiest way to secure personal files on Windows?</h3>
+<p>
+Encrypting your files with BitLocker or enabling device encryption provides a strong layer of security that prevents unauthorized access, even if your device is stolen.
+</p>
+
+<h3>Can I protect my data without antivirus software?</h3>
+<p>
+While safe browsing and strong passwords help, antivirus software is essential to detect and prevent malware that can steal personal data.
+</p>
+
+<h3>Are cloud backups safe for personal data?</h3>
+<p>
+Yes, if you use reputable cloud services with encryption. Enable two-factor authentication for added protection and always keep local copies of critical files.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="tech2.html"> Protect Your PC from Malware and Viruses</a></li>
+  <li><a href="errorcodes4.html">Fix Error Code 0x80004005</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fix Windows Blue Screen of Death (BSOD)</title>
+
+<meta name="description" content="Learn how to fix Windows Blue Screen of Death (BSOD) with simple step-by-step solutions like updating drivers, checking hardware, scanning for malware, and repairing system files.">
+<meta name="keywords" content="BSOD fix, blue screen of death, windows bsod, stop code, windows crash">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+ <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <!-- ARTICLE CARD -->
+
+  <div class="tutorial">
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>Fix Windows Blue Screen of Death (BSOD)</h1>
+
+<!-- QUICK ANSWER -->
+<h2>✅ Quick Answer</h2>
+<p>
+  The Blue Screen of Death (BSOD) happens due to driver issues, hardware failure, corrupted system files,
+  or incompatible software. The fastest fixes are to update drivers, uninstall recently installed software,
+  check hardware health, and run system repair tools like SFC & DISM. Most BSOD errors can be resolved without
+  reinstalling Windows.
+</p>
+
+<hr>
+
+<!-- PROBLEM EXPLANATION -->
+<h2>❓ Why Does BSOD Happen?</h2>
+<p>
+  BSOD is Windows’ way of protecting your system when it detects a serious problem. Instead of letting the
+  computer continue with errors, Windows stops everything and shows a blue screen with an error code.
+</p>
+
+<p>
+  Common causes include faulty drivers, damaged RAM, overheating, power issues, corrupted system files, or
+  recently installed apps. If you get BSOD repeatedly, it means the root cause is still present and must be fixed.
+</p>
+
+<p>
+  Don’t panic — most BSOD errors are fixable. You just need to identify the cause and apply the right solution.
+</p>
+
+<hr>
+
+<!-- FIX 1 -->
+<h2>🔧 Fix 1: Update or Rollback Drivers</h2>
+<p>
+  Faulty drivers are the most common reason for BSOD. Updating or rolling back a driver can fix the issue quickly.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + X</strong> and open <strong>Device Manager</strong>.</li>
+  <li>Look for devices with a yellow warning icon.</li>
+  <li>Right-click the device and select <strong>Update driver</strong>.</li>
+  <li>If the problem started after an update, select <strong>Properties → Driver → Roll Back Driver</strong>.</li>
+  <li>Restart your PC and check if BSOD returns.</li>
+</ol>
+
+<p>
+  If you are using a dedicated graphics card, updating GPU drivers from NVIDIA or AMD can solve many BSOD issues.
+</p>
+
+<hr>
+
+<!-- FIX 2 -->
+<h2>🔧 Fix 2: Run System File Checker (SFC) & DISM</h2>
+<p>
+  Corrupted system files can trigger BSOD. SFC and DISM tools repair damaged Windows files safely.
+</p>
+
+<ol>
+  <li>Search for <strong>Command Prompt</strong>, right-click and choose <strong>Run as administrator</strong>.</li>
+  <li>Type the following command and press Enter:</li>
+</ol>
+
+<pre>
+sfc /scannow
+</pre>
+
+<ol start="3">
+  <li>After SFC finishes, run DISM:</li>
+</ol>
+
+<pre>
+DISM /Online /Cleanup-Image /RestoreHealth
+</pre>
+
+<p>
+  Restart your PC after both commands finish. This fixes most file corruption issues causing BSOD.
+</p>
+
+<hr>
+
+<!-- FIX 3 -->
+<h2>🔧 Fix 3: Check RAM and Hard Drive Health</h2>
+<p>
+  Hardware issues like bad RAM or a failing hard drive can cause BSOD. Checking hardware health helps identify the root cause.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>mdsched.exe</strong> and press Enter.</li>
+  <li>Choose <strong>Restart now and check for problems</strong>.</li>
+  <li>For hard drive health, open <strong>Command Prompt (Admin)</strong> and run:</li>
+</ol>
+
+<pre>
+chkdsk C: /f /r
+</pre>
+
+<p>
+  If errors are found, Windows will attempt to repair them. Replace faulty RAM or hard drive if problems persist.
+</p>
+
+<hr>
+
+<!-- FIX 4 -->
+<h2>🔧 Fix 4: Uninstall Recent Software or Updates</h2>
+<p>
+  If BSOD started after installing new software or updates, removing them can stop the crash.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → Apps → Installed apps</strong>.</li>
+  <li>Uninstall recently installed programs.</li>
+  <li>Go to <strong>Settings → Windows Update → Update history</strong>.</li>
+  <li>Uninstall the latest update if BSOD started after it.</li>
+  <li>Restart PC and check stability.</li>
+</ol>
+
+<p>
+  Some programs (especially system utilities or performance boosters) can cause BSOD. Remove them first.
+</p>
+
+<hr>
+
+<!-- FIX 5 -->
+<h2>🔧 Fix 5: Disable Overclocking and Check Temperature</h2>
+<p>
+  Overclocking your CPU/GPU can cause instability and BSOD. Overheating also triggers blue screens.
+</p>
+
+<ol>
+  <li>If you overclocked, reset BIOS to default settings.</li>
+  <li>Clean dust from fans and vents.</li>
+  <li>Use a temperature monitoring tool like HWMonitor.</li>
+  <li>Ensure your CPU temperature stays below safe limits.</li>
+  <li>Replace thermal paste if needed.</li>
+</ol>
+
+<p>
+  If the PC is overheating, the system will automatically shut down to prevent damage. Fixing cooling usually stops BSOD.
+</p>
+
+<hr>
+
+<!-- FAQ -->
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Can BSOD damage my PC?</h3>
+<p>
+  No. BSOD is a safety feature to prevent damage. However, repeated crashes can indicate hardware failure which should be fixed.
+</p>
+
+<h3>Should I reinstall Windows to fix BSOD?</h3>
+<p>
+  Not always. Most BSOD issues are solved by updating drivers or repairing system files. Reinstalling is the last option.
+</p>
+
+<h3>What is the meaning of Stop Code?</h3>
+<p>
+  Stop codes help identify the cause of BSOD. Write down the code and search for solutions related to that specific error.
+</p>
+
+<hr>
+
+<!-- INTERNAL LINKS -->
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="window4.html">Repair Corrupted Files</a></li>
+  <li><a href="laptop1.html">Fix Laptop Turning On Issue</a></li>
+</ul>
+
+<div class="tutorial-footer">
+  Last updated: January 2026 • Techfix&Guides
+</div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

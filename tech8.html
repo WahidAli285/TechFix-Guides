@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Enable Firewall and Security Settings in Windows</title>
+
+<meta name="description" content="Learn how to enable Windows Firewall, configure security settings, and protect your PC from malware, hackers, and network threats.">
+<meta name="keywords" content="Windows Firewall, enable firewall, Windows security settings, protect PC, antivirus, network protection">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Enable Firewall and Security Settings in Windows</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Enabling Windows Firewall and configuring security settings is essential to protect your computer from malware, hackers, and network threats. Windows provides built-in tools for firewall control, network protection, and virus scanning. By enabling these features and adjusting security settings, you can significantly reduce risks while browsing or using your PC.
+</p>
+
+<hr>
+
+<h2>❓ Why Firewall and Security Settings Are Important</h2>
+<p>
+Firewalls act as a barrier between your computer and potential threats on the internet. Security settings help manage access to system resources, protect data, and prevent unauthorized software or connections.
+</p>
+<ul>
+  <li>Prevents unauthorized access to your files and network.</li>
+  <li>Blocks malicious programs and hackers from entering your PC.</li>
+  <li>Reduces the risk of ransomware, spyware, and other malware infections.</li>
+  <li>Provides alerts for suspicious activity on your network.</li>
+</ul>
+
+<hr>
+
+<h2>🔧 Step 1: Enable Windows Firewall</h2>
+<p>
+Windows Firewall is enabled by default, but it’s important to check and configure it correctly.
+</p>
+<ol>
+  <li>Press <strong>Windows + S</strong> and type <strong>Windows Security</strong>, then open it.</li>
+  <li>Click <strong>Firewall & network protection</strong>.</li>
+  <li>Select the active network (Domain, Private, or Public).</li>
+  <li>Ensure <strong>Microsoft Defender Firewall</strong> is turned on.</li>
+  <li>Optionally, click <strong>Advanced settings</strong> to create inbound/outbound rules for specific apps or ports.</li>
+</ol>
+
+<hr>
+
+<h2>🛡 Step 2: Configure Network Protection</h2>
+<p>
+Windows offers additional network protections to safeguard your system:
+</p>
+<ul>
+  <li>Enable <strong>Block all incoming connections, including those in the list of allowed apps</strong> for sensitive networks.</li>
+  <li>Ensure <strong>Notify me when Windows Defender Firewall blocks a new app</strong> is checked.</li>
+  <li>Keep public networks in <strong>Public network profile</strong> mode for stricter security.</li>
+</ul>
+
+<hr>
+
+<h2>💻 Step 3: Enable Real-Time Protection</h2>
+<p>
+Real-time protection helps detect and stop malware immediately.
+</p>
+<ol>
+  <li>Open <strong>Windows Security → Virus & threat protection</strong>.</li>
+  <li>Click <strong>Manage settings</strong> under Virus & threat protection settings.</li>
+  <li>Toggle on <strong>Real-time protection</strong> and <strong>Cloud-delivered protection</strong>.</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ Step 4: Use Controlled Folder Access</h2>
+<p>
+This feature prevents unauthorized apps from modifying protected folders.
+</p>
+<ol>
+  <li>Go to <strong>Windows Security → Virus & threat protection → Manage settings</strong>.</li>
+  <li>Scroll down to <strong>Controlled folder access</strong> and turn it on.</li>
+  <li>Add important folders and trusted apps as needed.</li>
+</ol>
+
+<hr>
+
+<h2>🔐 Step 5: Configure App & Browser Control</h2>
+<p>
+This setting protects against malicious apps and unsafe downloads.
+</p>
+<ol>
+  <li>Open <strong>Windows Security → App & browser control</strong>.</li>
+  <li>Set <strong>Check apps and files</strong> to <strong>Warn</strong> or <strong>Block</strong>.</li>
+  <li>Enable <strong>SmartScreen for Microsoft Edge</strong> to detect phishing sites.</li>
+</ol>
+
+<hr>
+
+<h2>💡 Step 6: Keep Windows Updated</h2>
+<p>
+Security features work best when Windows is up-to-date.
+</p>
+<ul>
+  <li>Press <strong>Windows + I</strong> → <strong>Update & Security → Windows Update</strong>.</li>
+  <li>Click <strong>Check for updates</strong> and install all pending updates.</li>
+  <li>Set automatic updates for regular security patches.</li>
+</ul>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Is Windows Firewall enough to protect my PC?</h3>
+<p>
+Windows Firewall combined with Windows Defender Antivirus provides solid protection. However, practicing safe browsing, avoiding suspicious downloads, and using MFA adds extra security.
+</p>
+
+<h3>Can I use a third-party firewall?</h3>
+<p>
+Yes, third-party firewalls can provide additional features, but make sure Windows Firewall is disabled to avoid conflicts.
+</p>
+
+<h3>How often should I check security settings?</h3>
+<p>
+Review security and firewall settings every few months or after installing new apps or connecting to public networks.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="tech1.html">Essential Tech Safety Tips Every Computer User Should Know</a></li>
+  <li><a href="internet3.html">Fix Wi-Fi Not Connecting on Android or iPhone</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

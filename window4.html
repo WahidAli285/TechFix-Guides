@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Repair Corrupted System Files (SFC & DISM)</title>
+
+<meta name="description" content="Repair corrupted system files using SFC and DISM commands. Fix Windows errors, crashes, and performance issues quickly and safely.">
+<meta name="keywords" content="sfc scannow, dism restorehealth, repair system files, windows corrupted files">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <!-- ARTICLE CARD -->
+
+  <div class="tutorial">
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Repair Corrupted System Files (SFC & DISM)</h1>
+
+<!-- QUICK ANSWER -->
+<h2>✅ Quick Answer</h2>
+<p>
+  Corrupted system files can cause crashes, slow performance, errors, and Windows instability.  
+  The best way to repair them is by running <strong>SFC /scannow</strong> and <strong>DISM /RestoreHealth</strong>.
+  SFC scans and repairs damaged Windows files, while DISM fixes the Windows image used by SFC.
+  If both tools fail, using Windows Repair or reinstalling Windows may be required.
+</p>
+
+<hr>
+
+<!-- PROBLEM EXPLANATION -->
+<h2>❓ Why System Files Get Corrupted?</h2>
+<p>
+  System files can become corrupted due to sudden shutdowns, power failure, malware, bad updates,
+  failed installations, or disk errors. When Windows cannot access important system files, you may
+  face errors like “App won’t open”, “Windows Update fails”, or frequent crashes.
+</p>
+
+<p>
+  Corrupted files also cause performance issues and can prevent your PC from starting properly.  
+  The good news is that Windows includes built-in tools to repair these files without reinstalling the OS.
+</p>
+
+<hr>
+
+<!-- FIX 1 -->
+<h2>🔧 Fix 1: Run SFC /scannow (System File Checker)</h2>
+<p>
+  SFC scans Windows system files and replaces corrupted files with a cached copy stored on your PC.
+  This is the most common and safest method to repair system issues.
+</p>
+
+<ol>
+  <li>Open <strong>Command Prompt</strong> as Administrator.</li>
+  <li>Type the command below and press Enter:</li>
+</ol>
+
+<pre>
+sfc /scannow
+</pre>
+
+<ol start="3">
+  <li>Wait for the scan to finish (can take 10–20 minutes).</li>
+  <li>After completion, check the result message:</li>
+</ol>
+
+<ul>
+  <li><strong>Windows Resource Protection did not find any integrity violations</strong> – No issues found.</li>
+  <li><strong>Windows Resource Protection found corrupt files and successfully repaired them</strong> – Fixed.</li>
+  <li><strong>Windows Resource Protection found corrupt files but was unable to fix some</strong> – Use DISM next.</li>
+</ul>
+
+<p>
+  Restart your PC after SFC completes. If SFC couldn’t fix everything, move to the next step.
+</p>
+
+<hr>
+
+<!-- FIX 2 -->
+<h2>🔧 Fix 2: Run DISM /RestoreHealth (Repair Windows Image)</h2>
+<p>
+  DISM fixes the Windows image, which SFC uses to repair corrupted files. If SFC fails, DISM is the next solution.
+</p>
+
+<ol>
+  <li>Open <strong>Command Prompt</strong> as Administrator.</li>
+  <li>Type the command below and press Enter:</li>
+</ol>
+
+<pre>
+DISM /Online /Cleanup-Image /RestoreHealth
+</pre>
+
+<ol start="3">
+  <li>Wait for the process to finish (can take 15–30 minutes).</li>
+  <li>After DISM finishes, run <strong>sfc /scannow</strong> again.</li>
+</ol>
+
+<p>
+  DISM may download files from Windows Update, so ensure you have a stable internet connection.
+</p>
+
+<hr>
+
+<!-- FIX 3 -->
+<h2>🔧 Fix 3: Use SFC in Safe Mode (If Normal Mode Fails)</h2>
+<p>
+  If your PC has serious corruption or apps blocking SFC, running SFC in Safe Mode helps because fewer services are running.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + I</strong> → <strong>System → Recovery</strong>.</li>
+  <li>Under <strong>Advanced startup</strong>, click <strong>Restart now</strong>.</li>
+  <li>Go to <strong>Troubleshoot → Advanced options → Startup Settings</strong>.</li>
+  <li>Click <strong>Restart</strong> and choose <strong>Safe Mode</strong>.</li>
+  <li>Open Command Prompt and run <strong>sfc /scannow</strong> again.</li>
+</ol>
+
+<p>
+  Safe Mode reduces interference from third-party apps, increasing success rate for repairs.
+</p>
+
+<hr>
+
+<!-- FIX 4 -->
+<h2>🔧 Fix 4: Repair Windows Using Installation Media (If DISM Fails)</h2>
+<p>
+  If DISM fails due to corrupted Windows Update components, using installation media is the final fix.
+  This method repairs the Windows image from the installation files.
+</p>
+
+<ol>
+  <li>Download the Windows Media Creation Tool from Microsoft.</li>
+  <li>Create a bootable USB or ISO.</li>
+  <li>Open Command Prompt as Administrator.</li>
+  <li>Run DISM with the source path:</li>
+</ol>
+
+<pre>
+DISM /Online /Cleanup-Image /RestoreHealth /Source:WIM:X:\Sources\Install.wim:1 /LimitAccess
+</pre>
+
+<p>
+  Replace <strong>X:</strong> with your USB drive letter.  
+  This method is more powerful and fixes deep system corruption.
+</p>
+
+<hr>
+
+<!-- FIX 5 -->
+<h2>🔧 Fix 5: Check Disk for Errors (Fix File System Issues)</h2>
+<p>
+  Disk errors can cause file corruption. Running CHKDSK repairs disk problems that may cause system file damage.
+</p>
+
+<ol>
+  <li>Open Command Prompt as Administrator.</li>
+  <li>Run:</li>
+</ol>
+
+<pre>
+chkdsk C: /f /r
+</pre>
+
+<p>
+  If the disk is in use, Windows will ask to schedule on next restart. Press Y and restart your PC.
+</p>
+
+<hr>
+
+<!-- FAQ -->
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>How long does SFC /scannow take?</h3>
+<p>
+  Usually 10–20 minutes. It depends on system speed and disk size. Do not interrupt the process.
+</p>
+
+<h3>What is the difference between SFC and DISM?</h3>
+<p>
+  SFC repairs corrupted system files using local cache.  
+  DISM repairs the Windows image, which SFC relies on.
+</p>
+
+<h3>Can these commands delete my files?</h3>
+<p>
+  No. SFC and DISM only repair system files and do not delete personal data.
+</p>
+
+<hr>
+
+<!-- INTERNAL LINKS -->
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="window2.html">How to Speed Up a Slow Windows PC</a></li>
+  <li><a href="errorcodes2.html"> Fix Windows Update Error Code 0x80070422</a></li>
+</ul>
+
+<div class="tutorial-footer">
+  Last updated: January 2026 • Techfix&Guides
+</div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

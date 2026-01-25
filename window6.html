@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Recover Deleted Files in Windows</title>
+
+<meta name="description" content="Learn how to recover deleted files in Windows using Recycle Bin, File History, Restore Previous Versions, and recovery software.">
+<meta name="keywords" content="recover deleted files, windows file recovery, recycle bin, file history, restore previous versions">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+ <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <!-- ARTICLE CARD -->
+
+  <div class="tutorial">
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Recover Deleted Files in Windows (Recycle Bin, File History & Recovery Software)</h1>
+
+<!-- QUICK ANSWER -->
+<h2>✅ Quick Answer</h2>
+<p>
+  If you deleted a file accidentally, the easiest recovery method is to check the
+  <strong>Recycle Bin</strong>. If it’s not there, use <strong>File History</strong> or
+  <strong>Restore Previous Versions</strong>.  
+  For files deleted permanently or emptied from the Recycle Bin, use reliable recovery
+  software like <strong>Recuva</strong> or <strong>Disk Drill</strong>.
+</p>
+
+<hr>
+
+<!-- PROBLEM EXPLANATION -->
+<h2>❓ Why Deleted Files Can Still Be Recovered?</h2>
+<p>
+  When you delete a file, Windows usually doesn’t erase the data immediately.  
+  Instead, it marks the storage space as “available” and removes the file’s reference
+  from the file table. Until new data overwrites that space, recovery is possible.
+</p>
+
+<p>
+  This is why it’s important to stop using the drive as soon as you realize files are missing.
+  The longer you use it, the higher the chance the deleted data will be overwritten.
+</p>
+
+<hr>
+
+<!-- FIX 1 -->
+<h2>🔧 Fix 1: Check Recycle Bin First</h2>
+<p>
+  The Recycle Bin is the first place to look. Most deleted files remain there unless
+  you used Shift + Delete or emptied the bin.
+</p>
+
+<ol>
+  <li>Double-click <strong>Recycle Bin</strong> on the desktop.</li>
+  <li>Search for your deleted file using the search bar.</li>
+  <li>Right-click the file and choose <strong>Restore</strong>.</li>
+  <li>The file will return to its original folder.</li>
+</ol>
+
+<p>
+  <strong>Tip:</strong> If you cannot find the file, sort the list by <strong>Date Deleted</strong>.
+</p>
+
+<hr>
+
+<!-- FIX 2 -->
+<h2>🔧 Fix 2: Restore Previous Versions</h2>
+<p>
+  Windows keeps “previous versions” of files if you have File History or System Protection enabled.
+  This method works even if the file was deleted a long time ago.
+</p>
+
+<ol>
+  <li>Open the folder where the file was located.</li>
+  <li>Right-click inside the folder and select <strong>Properties</strong>.</li>
+  <li>Go to <strong>Previous Versions</strong>.</li>
+  <li>Select a version and click <strong>Restore</strong>.</li>
+</ol>
+
+<p>
+  If you don’t see previous versions, it means File History or System Protection is not enabled.
+</p>
+
+<hr>
+
+<!-- FIX 3 -->
+<h2>🔧 Fix 3: Use File History Backup</h2>
+<p>
+  File History is a Windows backup feature that saves copies of your files automatically.
+  If enabled, you can recover deleted files easily.
+</p>
+
+<ol>
+  <li>Go to <strong>Settings → Update & Security → Backup</strong>.</li>
+  <li>Click <strong>More options</strong>.</li>
+  <li>Scroll down and click <strong>Restore files from a current backup</strong>.</li>
+  <li>Browse to the folder and select the file.</li>
+  <li>Click <strong>Restore</strong>.</li>
+</ol>
+
+<p>
+  If File History is not enabled, you should enable it now to prevent future data loss.
+</p>
+
+<hr>
+
+<!-- FIX 4 -->
+<h2>🔧 Fix 4: Recover Using Windows File Recovery Tool</h2>
+<p>
+  Windows File Recovery is a free Microsoft tool available from the Microsoft Store.
+  It helps recover permanently deleted files using command line.
+</p>
+
+<ol>
+  <li>Download <strong>Windows File Recovery</strong> from Microsoft Store.</li>
+  <li>Open <strong>Command Prompt</strong> as Administrator.</li>
+  <li>Use the command below:</li>
+</ol>
+
+<pre>
+winfr C: D: /n \Users\YourName\Documents\*.docx
+</pre>
+
+<p>
+  Replace <strong>C:</strong> with the drive where the file was deleted and <strong>D:</strong>
+  with the recovery drive (different drive is recommended).
+</p>
+
+<hr>
+
+<!-- FIX 5 -->
+<h2>🔧 Fix 5: Use Third-Party Recovery Software (Recuva / Disk Drill)</h2>
+<p>
+  If you need a simple user-friendly recovery solution, third-party tools are best.
+  They can scan the drive deeply and recover files even after Recycle Bin is emptied.
+</p>
+
+<ol>
+  <li>Download and install <strong>Recuva</strong> or <strong>Disk Drill</strong>.</li>
+  <li>Run the software and select the drive where the file was deleted.</li>
+  <li>Start a deep scan.</li>
+  <li>Select files and click <strong>Recover</strong>.</li>
+  <li>Save recovered files to a different drive.</li>
+</ol>
+
+<p>
+  Always save recovered files to another drive to avoid overwriting deleted data.
+</p>
+
+<hr>
+
+<!-- FAQ -->
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Can I recover files after emptying Recycle Bin?</h3>
+<p>
+  Yes, you can recover files using recovery software as long as the data has not been overwritten.
+</p>
+
+<h3>How long can deleted files be recovered?</h3>
+<p>
+  It depends on disk usage. If you stop using the drive immediately, recovery is often possible
+  for weeks or months. But once overwritten, recovery becomes impossible.
+</p>
+
+<h3>Is it safe to use recovery software?</h3>
+<p>
+  Yes, reputable tools like Recuva and Disk Drill are safe. Just download from official websites.
+</p>
+
+<hr>
+
+<!-- INTERNAL LINKS -->
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="window8.html">Resolve Black Screen Issue</a></li>
+   <li><a href="device1.html">Optimize Windows PC for Better Performance</a></li>
+</ul>
+
+<div class="tutorial-footer">
+  Last updated: January 2026 • Techfix&Guides
+</div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

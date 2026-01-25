@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Router Not Working or Not Responding</title>
+
+<meta name="description" content="Router not working or not responding? Learn simple fixes like router reset, firmware update, factory reset, and configuration checks.">
+<meta name="keywords" content="router not responding, router not working, router reset, router firmware update">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Internet</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix Router Not Working or Not Responding</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      If your router is not working or not responding, it usually happens because of outdated firmware,
+      overloaded router memory, corrupted settings, or power issues. The most effective fixes are to
+      restart the router, update firmware, reset configuration, and check power cables.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Does Router Stop Responding?</h2>
+    <p>
+      Routers can stop responding due to software glitches, overheating, or hardware failure. Sometimes,
+      a sudden power surge or a faulty cable causes the router to freeze and stop broadcasting Wi-Fi.
+    </p>
+
+    <p>
+      Another common reason is outdated firmware. Router firmware is the internal software that controls
+      the router. If it becomes old or corrupted, the router may freeze, restart randomly, or stop working.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Restart Router & Modem</h2>
+    <p>
+      Restarting is the fastest fix and often resolves temporary bugs.
+    </p>
+    <ol>
+      <li>Turn off the router and modem.</li>
+      <li>Unplug power cables from both devices.</li>
+      <li>Wait 60 seconds.</li>
+      <li>Plug the modem back in first.</li>
+      <li>Wait 2 minutes, then plug the router back in.</li>
+      <li>Wait 2 minutes and check the Wi-Fi again.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Check Power Supply & Cable</h2>
+    <p>
+      A weak power supply or damaged cable can cause the router to freeze.
+    </p>
+    <ul>
+      <li>Use the original adapter (correct voltage).</li>
+      <li>Check for cable damage or bending.</li>
+      <li>Try a different power socket.</li>
+      <li>If possible, test with another compatible adapter.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Update Router Firmware</h2>
+    <p>
+      Firmware update fixes bugs and improves stability.
+    </p>
+    <ol>
+      <li>Open your browser and enter router IP (usually <strong>192.168.1.1</strong>).</li>
+      <li>Login with admin credentials.</li>
+      <li>Go to <strong>System / Firmware Update</strong>.</li>
+      <li>Click <strong>Check for Updates</strong> and install.</li>
+      <li>Restart the router after update.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Reset Router Settings</h2>
+    <p>
+      Resetting restores default settings and removes corrupted configuration.
+    </p>
+    <ol>
+      <li>Find the <strong>Reset</strong> button on the router.</li>
+      <li>Press and hold for 10–15 seconds using a paperclip.</li>
+      <li>Router will restart automatically.</li>
+      <li>Reconfigure Wi-Fi name and password.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Check Overheating & Placement</h2>
+    <p>
+      Routers overheat when placed in closed spaces or under heavy load.
+    </p>
+    <ul>
+      <li>Place router in open area with airflow.</li>
+      <li>Avoid direct sunlight and tight cabinets.</li>
+      <li>Keep it away from microwave and other electronics.</li>
+      <li>Consider a cooling pad if it gets very hot.</li>
+    </ul>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>My router lights are on but Wi-Fi is not working. What should I do?</h3>
+    <p>
+      Restart the router, check the WAN cable, and make sure the internet line is active from ISP.
+    </p>
+
+    <h3>How often should I update router firmware?</h3>
+    <p>
+      Update firmware every 3–6 months or whenever you notice instability.
+    </p>
+
+    <h3>Will resetting the router delete my Wi-Fi password?</h3>
+    <p>
+      Yes. A factory reset restores default settings, so you must set Wi-Fi name and password again.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="android4.html">Fix Android Wi-Fi Connection Problems</a></li>
+      <li><a href="internet2.html">Fix Slow Internet Speed</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

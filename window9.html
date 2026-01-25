@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Printer Not Working in Windows</title>
+
+<meta name="description" content="Printer not working in Windows? Fix printer connectivity, driver issues, and printing errors with simple step-by-step troubleshooting.">
+<meta name="keywords" content="printer not working, printer offline, printer driver, windows printer issues, print spooler">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+ <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Windows</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix Printer Not Working in Windows</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      Printer issues in Windows are usually caused by driver problems, connection issues,
+      print spooler errors, or incorrect printer settings.  
+      The quickest fixes are to restart the Print Spooler service, reconnect the printer,
+      update/reinstall drivers, and run the Windows Printer Troubleshooter.
+      These steps fix most printer problems without losing your documents.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Printers Stop Working in Windows?</h2>
+    <p>
+      A printer may stop working suddenly even if it was working yesterday.
+      In most cases, Windows cannot communicate with the printer properly.
+      This can happen due to:
+    </p>
+
+    <ul>
+      <li>Incorrect or outdated printer drivers</li>
+      <li>USB or network connection issues</li>
+      <li>Print Spooler service crashes</li>
+      <li>Paper jam, low ink, or printer errors</li>
+      <li>Windows update or system changes</li>
+    </ul>
+
+    <p>
+      In this guide, you will learn how to diagnose the problem and fix it step-by-step.
+      Even beginners can follow these steps easily.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Restart the Print Spooler Service</h2>
+    <p>
+      Print Spooler is the Windows service that manages printing jobs.
+      If it crashes, all print jobs will stop and your printer may appear offline.
+    </p>
+
+    <ol>
+      <li>Press <strong>Windows + R</strong>, type <strong>services.msc</strong> and press Enter.</li>
+      <li>Scroll to <strong>Print Spooler</strong>.</li>
+      <li>Right-click it and select <strong>Restart</strong>.</li>
+      <li>Now try printing again.</li>
+    </ol>
+
+    <p>
+      If the issue continues, move to the next fix.
+    </p>
+
+    <p><strong>Screenshot:</strong> Print Spooler service panel.</p>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Run Windows Printer Troubleshooter</h2>
+    <p>
+      Windows has a built-in printer troubleshooter that detects and fixes common printing issues.
+    </p>
+
+    <ol>
+      <li>Open <strong>Settings → System → Troubleshoot</strong>.</li>
+      <li>Click <strong>Other troubleshooters</strong>.</li>
+      <li>Find <strong>Printer</strong> and click <strong>Run</strong>.</li>
+      <li>Follow on-screen instructions.</li>
+    </ol>
+
+    <p>
+      The troubleshooter can fix printer queue errors, driver issues, and connectivity problems automatically.
+    </p>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Check Printer Connection (USB / Wi-Fi)</h2>
+    <p>
+      Connection issues are the most common reason for printers not working.
+      Ensure the printer is properly connected and powered on.
+    </p>
+
+    <ul>
+      <li>If using USB: unplug the cable → wait 10 seconds → reconnect to another USB port.</li>
+      <li>If using Wi-Fi: make sure the printer is connected to the same Wi-Fi network as your PC.</li>
+      <li>Restart your router and printer.</li>
+      <li>Try printing a test page.</li>
+    </ul>
+
+    <p>
+      If your printer still doesn’t work, check the next step.
+    </p>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Update or Reinstall Printer Drivers</h2>
+    <p>
+      Printer drivers are essential for Windows to communicate with your printer.
+      Outdated or corrupted drivers can stop printing.
+    </p>
+
+    <ol>
+      <li>Open <strong>Device Manager</strong> (Windows + X).</li>
+      <li>Expand <strong>Printers</strong> or <strong>Print queues</strong>.</li>
+      <li>Right-click your printer → <strong>Update driver</strong>.</li>
+      <li>If update fails, choose <strong>Uninstall device</strong> and restart PC.</li>
+      <li>Download the latest driver from your printer manufacturer (HP, Canon, Epson).</li>
+    </ol>
+
+    <p>
+      After reinstalling, print a test page again.
+    </p>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Clear Printer Queue and Print Spooler Files</h2>
+    <p>
+      Sometimes stuck print jobs block the queue and stop printing.
+      Clearing the print queue solves this.
+    </p>
+
+    <ol>
+      <li>Press <strong>Windows + R</strong> and type <strong>services.msc</strong>.</li>
+      <li>Stop <strong>Print Spooler</strong>.</li>
+      <li>Open <strong>C:\Windows\System32\spool\PRINTERS</strong>.</li>
+      <li>Delete all files inside the folder.</li>
+      <li>Start <strong>Print Spooler</strong> again.</li>
+    </ol>
+
+    <p>
+      This removes stuck jobs and allows new prints to start.
+    </p>
+
+    <hr>
+
+    <!-- FIX 6 -->
+    <h2>🔧 Fix 6: Set Printer as Default and Clear Offline Status</h2>
+    <p>
+      Windows may mark the printer as offline or not default.
+      Setting it as default fixes many issues.
+    </p>
+
+    <ol>
+      <li>Go to <strong>Settings → Bluetooth & devices → Printers & scanners</strong>.</li>
+      <li>Select your printer.</li>
+      <li>Click <strong>Set as default</strong>.</li>
+      <li>Turn off <strong>Use printer offline</strong> if enabled.</li>
+      <li>Try printing again.</li>
+    </ol>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Why does my printer show offline even when it is connected?</h3>
+    <p>
+      The printer can show offline due to wrong network settings, driver issues, or a stuck print queue.
+      Restarting the Print Spooler and setting the printer as default usually fixes this.
+    </p>
+
+    <h3>Do I need the manufacturer driver?</h3>
+    <p>
+      Yes. Generic Windows drivers may not support all features.
+      Download the latest driver from HP, Canon, Epson, or Brother for best results.
+    </p>
+
+    <h3>Will clearing print queue delete my documents?</h3>
+    <p>
+      No. Clearing the print queue only removes pending print jobs.
+      Your documents remain safe on your PC.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="window5.html">Fix WiFi Connected but No Internet</a></li>
+      <li><a href="browser8.html">Browser Showing Blank Page</a></li>
+      
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

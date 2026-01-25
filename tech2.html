@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Protect Your PC from Malware and Viruses</title>
+
+<meta name="description" content="Learn how to protect your PC from malware and viruses with essential security tips, antivirus software, safe browsing practices, and system maintenance techniques.">
+<meta name="keywords" content="protect PC, malware protection, virus protection, antivirus tips, cybersecurity, safe computing, secure Windows">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Security</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Protect Your PC from Malware and Viruses</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Protecting your PC from malware and viruses requires a combination of proactive security practices, safe browsing habits, and reliable software. Key measures include installing antivirus software, keeping your system updated, avoiding suspicious downloads, managing user privileges, and regularly scanning and backing up data. These practices reduce the risk of infection and ensure your computer runs safely and efficiently.
+</p>
+
+<hr>
+
+<h2>❓ Why Malware Protection is Important</h2>
+<p>
+Malware and viruses can cause data loss, slow down your PC, steal sensitive information, or even allow hackers to take control of your system. With the rise of ransomware, trojans, and spyware, a single security lapse can have devastating consequences. Protecting your PC is not just about safety; it also preserves productivity, prevents financial loss, and protects your personal information.
+</p>
+
+<hr>
+
+<h2>🛡 Tip 1: Install Reliable Antivirus Software</h2>
+<p>
+A robust antivirus solution is your first defense against malware.
+</p>
+<ol>
+  <li>Choose a trusted antivirus or internet security suite.</li>
+  <li>Enable real-time protection and automatic updates.</li>
+  <li>Schedule regular full-system scans to catch hidden threats.</li>
+  <li>Keep the antivirus definitions up to date to detect the latest threats.</li>
+</ol>
+
+<hr>
+
+<h2>🔑 Tip 2: Keep Windows and Applications Updated</h2>
+<p>
+Updates often patch security vulnerabilities exploited by malware.
+</p>
+<ul>
+  <li>Enable automatic Windows updates.</li>
+  <li>Update browsers, plugins, and essential software.</li>
+  <li>Remove or disable outdated software that may be vulnerable.</li>
+</ul>
+
+<hr>
+
+<h2>⚠️ Tip 3: Avoid Suspicious Downloads and Attachments</h2>
+<p>
+Malicious files are a common method for spreading malware.
+</p>
+<ul>
+  <li>Download software only from official websites or verified sources.</li>
+  <li>Avoid clicking email attachments from unknown senders.</li>
+  <li>Be cautious with pirated software, as it may include malware.</li>
+</ul>
+
+<hr>
+
+<h2>🔒 Tip 4: Enable a Firewall</h2>
+<p>
+Firewalls block unauthorized access and prevent malware from communicating with external servers.
+</p>
+<ol>
+  <li>Enable Windows Defender Firewall or a trusted third-party firewall.</li>
+  <li>Configure exceptions only for trusted programs.</li>
+  <li>Regularly review firewall logs for suspicious activity.</li>
+</ol>
+
+<hr>
+
+<h2>💾 Tip 5: Backup Your Data Regularly</h2>
+<p>
+Backups protect your files in case of ransomware or system failure.
+</p>
+<ul>
+  <li>Use external drives or secure cloud storage for backups.</li>
+  <li>Schedule automatic backups for critical files.</li>
+  <li>Maintain offline backups for additional security.</li>
+</ul>
+
+<hr>
+
+<h2>🌐 Tip 6: Practice Safe Browsing Habits</h2>
+<p>
+Unsafe browsing can expose your PC to malware.
+</p>
+<ol>
+  <li>Avoid visiting untrusted websites.</li>
+  <li>Do not click on suspicious pop-ups or links.</li>
+  <li>Install browser security extensions that block malicious sites.</li>
+</ol>
+
+<hr>
+
+<h2>👁 Tip 7: Use Limited User Accounts</h2>
+<p>
+Operating daily on a standard user account reduces the impact of malware infections.
+</p>
+<ul>
+  <li>Use an administrator account only for installing software or system changes.</li>
+  <li>Regularly review account permissions and remove unused accounts.</li>
+  <li>Consider using guest accounts for shared computers.</li>
+</ul>
+
+<hr>
+
+<h2>🔧 Tip 8: Enable Ransomware Protection</h2>
+<p>
+Modern Windows includes ransomware protection features.
+</p>
+<ol>
+  <li>Go to Windows Security → Virus & Threat Protection → Ransomware Protection.</li>
+  <li>Enable Controlled Folder Access to protect critical folders.</li>
+  <li>Regularly monitor notifications for blocked access attempts.</li>
+</ol>
+
+<hr>
+
+<h2>💡 Tip 9: Use a VPN on Public Networks</h2>
+<p>
+Public Wi-Fi can expose your PC to attackers.
+</p>
+<ul>
+  <li>Use a trusted VPN to encrypt your internet connection.</li>
+  <li>Avoid conducting sensitive transactions over public networks.</li>
+  <li>Disable file sharing when connected to public Wi-Fi.</li>
+</ul>
+
+<hr>
+
+<h2>📌 Tip 10: Educate Yourself and Stay Informed</h2>
+<p>
+Awareness is one of the most effective defenses against malware.
+</p>
+<ol>
+  <li>Keep up with the latest cybersecurity news.</li>
+  <li>Learn to identify phishing attempts and social engineering tactics.</li>
+  <li>Regularly review security settings and policies on your PC.</li>
+</ol>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Can free antivirus software protect my PC from all malware?</h3>
+<p>
+Free antivirus programs can provide basic protection, but paid versions often offer more advanced features like ransomware protection, phishing detection, and real-time threat updates.
+</p>
+
+<h3>How do I know if my PC is infected with malware?</h3>
+<p>
+Signs include slow performance, frequent crashes, unexpected pop-ups, unknown programs running, or strange network activity. Running a full system scan is recommended if you notice these signs.
+</p>
+
+<h3>Is it safe to disable antivirus temporarily?</h3>
+<p>
+Only do so if absolutely necessary, such as for installing trusted software. Re-enable it immediately after to maintain protection.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="tech5.html">Protect Personal Data on Windows PC</a></li>
+  <li><a href="android8.html"> Recover Deleted Files on Android</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>
