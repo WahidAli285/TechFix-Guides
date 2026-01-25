@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Improve Battery Life on Laptop</title>
+
+<meta name="description" content="Learn how to improve battery life on your laptop with practical tips like power settings optimization, background app control, and system maintenance for longer usage.">
+<meta name="keywords" content="improve laptop battery life, extend battery life Windows, laptop battery draining fast, battery optimization tips">
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Improve Battery Life on Laptop</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+You can improve laptop battery life by optimizing power settings, reducing background activity, lowering screen brightness, disabling unnecessary hardware features, and keeping your system clean and updated. Small changes in daily usage and Windows settings can significantly extend battery backup without replacing the battery or upgrading hardware.
+</p>
+
+<hr>
+
+<h2>❓ Why Does Laptop Battery Drain So Fast?</h2>
+<p>
+Fast battery drain is one of the most common laptop complaints. Even new laptops can suffer from poor battery life if system settings and usage habits are not optimized.
+</p>
+
+<ul>
+  <li>High screen brightness</li>
+  <li>Too many background applications</li>
+  <li>Power-hungry apps and services</li>
+  <li>Wi-Fi, Bluetooth, and peripherals always enabled</li>
+  <li>Outdated drivers or Windows bugs</li>
+  <li>Battery wear over time</li>
+</ul>
+
+<hr>
+
+<h2>🔍 Step 1: Check Which Apps Drain Battery</h2>
+<p>
+Before making changes, identify apps that consume the most power.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → System → Power & battery</strong>.</li>
+  <li>Scroll to <strong>Battery usage</strong>.</li>
+  <li>Review apps with the highest battery consumption.</li>
+</ol>
+
+<p>
+Unnecessary apps running in the background are often the biggest battery killers.
+</p>
+
+<hr>
+
+<h2>🔋 Step 2: Enable Battery Saver Mode</h2>
+<p>
+Battery Saver is one of the simplest ways to extend battery life.
+</p>
+
+<ol>
+  <li>Go to <strong>Settings → System → Power & battery</strong>.</li>
+  <li>Turn on <strong>Battery saver</strong>.</li>
+  <li>Set it to activate automatically at 30–40% battery.</li>
+</ol>
+
+<p>
+Battery Saver reduces background activity and limits performance slightly to conserve power.
+</p>
+
+<hr>
+
+<h2>💡 Step 3: Reduce Screen Brightness</h2>
+<p>
+The display is one of the largest power consumers on a laptop.
+</p>
+
+<ul>
+  <li>Lower brightness to a comfortable level</li>
+  <li>Disable adaptive brightness if it increases brightness unnecessarily</li>
+  <li>Use dark wallpapers (not dark mode CSS)</li>
+</ul>
+
+<p>
+Even a 10–20% brightness reduction can noticeably extend battery life.
+</p>
+
+<hr>
+
+<h2>⚙️ Step 4: Optimize Power Mode</h2>
+<p>
+Windows allows you to choose how aggressively it balances performance and battery.
+</p>
+
+<ol>
+  <li>Click the battery icon in the taskbar.</li>
+  <li>Select <strong>Best power efficiency</strong>.</li>
+</ol>
+
+<p>
+This mode limits CPU boost behavior and background activity.
+</p>
+
+<hr>
+
+<h2>🚀 Step 5: Disable Startup and Background Apps</h2>
+<p>
+Apps running silently in the background constantly consume power.
+</p>
+
+<ol>
+  <li>Open <strong>Task Manager</strong>.</li>
+  <li>Go to the <strong>Startup</strong> tab.</li>
+  <li>Disable non-essential apps.</li>
+</ol>
+
+<p>
+Also review background permissions under <strong>Settings → Apps</strong>.
+</p>
+
+<hr>
+
+<h2>📶 Step 6: Turn Off Unused Hardware Features</h2>
+<p>
+Wireless features and peripherals drain battery even when idle.
+</p>
+
+<ul>
+  <li>Turn off Bluetooth when not in use</li>
+  <li>Disable Wi-Fi if working offline</li>
+  <li>Unplug USB devices</li>
+  <li>Disable keyboard backlight if not needed</li>
+</ul>
+
+<hr>
+
+<h2>🧠 Step 7: Keep Windows and Drivers Updated</h2>
+<p>
+Updates often improve power efficiency and fix battery drain bugs.
+</p>
+
+<ul>
+  <li>Install Windows updates regularly</li>
+  <li>Update graphics and chipset drivers</li>
+  <li>Restart after updates</li>
+</ul>
+
+<hr>
+
+<h2>🛡 Step 8: Scan for Malware</h2>
+<p>
+Malware can run hidden processes that consume power continuously.
+</p>
+
+<ol>
+  <li>Open <strong>Windows Security</strong>.</li>
+  <li>Run a <strong>Full scan</strong>.</li>
+</ol>
+
+<p>
+Removing malware can instantly improve battery performance.
+</p>
+
+<hr>
+
+<h2>🔌 Step 9: Adjust Sleep and Screen Timeout Settings</h2>
+<p>
+Shorter screen and sleep timeouts prevent unnecessary power drain.
+</p>
+
+<ul>
+  <li>Set screen off time to 2–5 minutes on battery</li>
+  <li>Enable sleep after 10–15 minutes of inactivity</li>
+</ul>
+
+<hr>
+
+<h2>🔄 Step 10: Maintain Battery Health</h2>
+<p>
+Long-term habits affect battery lifespan.
+</p>
+
+<ul>
+  <li>Avoid keeping the battery at 100% constantly</li>
+  <li>Don’t let it drain to 0% frequently</li>
+  <li>Keep the laptop cool</li>
+</ul>
+
+<p>
+Healthy batteries hold charge longer and degrade more slowly.
+</p>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Is it normal for battery life to decrease over time?</h3>
+<p>
+Yes. Lithium-ion batteries naturally lose capacity with age and charge cycles.
+</p>
+
+<h3>Does closing apps really save battery?</h3>
+<p>
+Yes. Fewer active processes mean less CPU and disk usage.
+</p>
+
+<h3>Should I keep my laptop plugged in all the time?</h3>
+<p>
+Occasional unplugging is healthier for long-term battery lifespan.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="device1.html">Optimize Windows PC for Better Performance</a></li>
+  <li><a href="android6.html"> Fix Android Phone Slow Performance</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

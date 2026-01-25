@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Windows Update Error Code 0x80070422</title>
+
+<meta name="description" content="Learn how to fix Windows Update Error 0x80070422 with step-by-step solutions including services check, firewall settings, and update troubleshooter.">
+<meta name="keywords" content="Windows Update error 0x80070422, fix 0x80070422, Windows update not working, Windows troubleshooting">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+ <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix Windows Update Error Code 0x80070422</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Windows Update Error 0x80070422 usually occurs when the Windows Update service is disabled or not running, network connections are blocked, or firewall settings prevent updates. To fix it, enable the Windows Update service, check network settings, run the update troubleshooter, and restart your PC.
+</p>
+
+<hr>
+
+<h2>❓ Why Does Error 0x80070422 Occur?</h2>
+<p>
+This error happens when Windows cannot start the update service or when system policies or firewall settings prevent updates. It may also appear if the service is set to manual or disabled, or if third-party software interferes with updates.
+</p>
+
+<hr>
+
+<h2>🔧 Fix 1: Enable Windows Update Service</h2>
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>services.msc</strong>, and press Enter.</li>
+  <li>In the Services window, locate <strong>Windows Update</strong>.</li>
+  <li>Right-click → <strong>Properties</strong>.</li>
+  <li>Set <strong>Startup type</strong> to <strong>Automatic</strong>.</li>
+  <li>Click <strong>Start</strong> if the service is stopped, then click <strong>Apply</strong> and <strong>OK</strong>.</li>
+  <li>Restart your PC and check for updates.</li>
+</ol>
+
+<hr>
+
+<h2>🧹 Fix 2: Run Windows Update Troubleshooter</h2>
+<ol>
+  <li>Go to <strong>Settings → Update & Security → Troubleshoot → Additional troubleshooters</strong>.</li>
+  <li>Select <strong>Windows Update</strong> and click <strong>Run the troubleshooter</strong>.</li>
+  <li>Follow the instructions to automatically detect and fix problems.</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ Fix 3: Check Network & Firewall Settings</h2>
+<ol>
+  <li>Ensure you have an active internet connection.</li>
+  <li>Disable any third-party firewall temporarily.</li>
+  <li>Open <strong>Control Panel → Windows Defender Firewall → Turn Windows Defender Firewall on or off</strong>.</li>
+  <li>Turn off firewall temporarily to see if the update works.</li>
+</ol>
+
+<hr>
+
+<h2>💾 Fix 4: Reset Windows Update Components</h2>
+<p>Sometimes, corrupted update components cause this error.</p>
+<ol>
+  <li>Open <strong>Command Prompt as Administrator</strong>.</li>
+  <li>Run the following commands one by one:</li>
+</ol>
+<pre>
+net stop wuauserv
+net stop cryptSvc
+net stop bits
+net stop msiserver
+ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
+ren C:\Windows\System32\catroot2 catroot2.old
+net start wuauserv
+net start cryptSvc
+net start bits
+net start msiserver
+</pre>
+<p>Restart your PC and try updating again.</p>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Can 0x80070422 occur on all versions of Windows?</h3>
+<p>Yes, it can occur on Windows 7, 8, 10, and 11 when the update service is disabled or misconfigured.</p>
+
+<h3>Is it safe to disable firewall temporarily?</h3>
+<p>Yes, briefly disabling the firewall for troubleshooting is safe, but remember to enable it after updates.</p>
+
+<h3>Will resetting Windows Update components fix the error?</h3>
+<p>Yes, it resolves most cases where update files or services are corrupted.</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="errorcodes7.html"> Fix Device Manager Error Code 43</a></li>
+  <li><a href="device5.html">Optimize Disk Usage and Improve Storage Performance</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

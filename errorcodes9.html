@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Windows Activation Error 0xC004F074</title>
+
+<meta name="description" content="Learn how to fix Windows Activation Error 0xC004F074 using simple methods like checking system time, KMS server, and activation settings.">
+<meta name="keywords" content="Windows Activation Error 0xC004F074, Windows activation failed, fix activation error, KMS activation error, Windows not activated">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+ <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix Windows Activation Error 0xC004F074</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Windows Activation Error 0xC004F074 usually occurs when your system cannot connect to the Key Management Service (KMS) server during activation. This issue is often caused by incorrect system time, network problems, outdated activation files, or misconfigured KMS settings. You can fix it by syncing date and time, checking network connectivity, restarting activation services, or activating Windows manually.
+</p>
+
+<hr>
+
+<h2>❓ Why Does Windows Activation Error 0xC004F074 Occur?</h2>
+<p>Common causes include:</p>
+<ul>
+  <li>Incorrect system date and time</li>
+  <li>Unable to reach the KMS activation server</li>
+  <li>Network or DNS connectivity issues</li>
+  <li>Corrupted Windows activation files</li>
+  <li>Using an invalid or expired product key</li>
+</ul>
+
+<hr>
+
+<h2>🕒 Fix 1: Sync Date and Time</h2>
+<p>Windows activation requires accurate system time.</p>
+<ol>
+  <li>Open <strong>Settings → Time & Language → Date & Time</strong>.</li>
+  <li>Enable <strong>Set time automatically</strong>.</li>
+  <li>Click <strong>Sync now</strong>.</li>
+  <li>Restart your PC and try activating again.</li>
+</ol>
+
+<hr>
+
+<h2>🌐 Fix 2: Check Internet Connection</h2>
+<ol>
+  <li>Ensure your PC is connected to the internet.</li>
+  <li>Disable VPN temporarily if you are using one.</li>
+  <li>Restart your router or switch to another network.</li>
+  <li>Try activating Windows again.</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ Fix 3: Restart Windows Activation Services</h2>
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>services.msc</strong>, press Enter.</li>
+  <li>Find <strong>Software Protection</strong>.</li>
+  <li>Right-click → <strong>Restart</strong>.</li>
+  <li>Set Startup type to <strong>Automatic</strong>.</li>
+</ol>
+
+<hr>
+
+<h2>💻 Fix 4: Activate Windows Manually Using Command Prompt</h2>
+<ol>
+  <li>Press <strong>Windows + X</strong> → select <strong>Command Prompt (Admin)</strong>.</li>
+  <li>Run the following commands one by one:</li>
+</ol>
+
+<pre>
+slmgr /ipk YOUR-PRODUCT-KEY
+slmgr /ato
+</pre>
+
+<p>Replace <strong>YOUR-PRODUCT-KEY</strong> with a valid Windows license key.</p>
+
+<hr>
+
+<h2>🔁 Fix 5: Run Windows Activation Troubleshooter</h2>
+<ol>
+  <li>Go to <strong>Settings → System → Activation</strong>.</li>
+  <li>Click <strong>Troubleshoot</strong>.</li>
+  <li>Follow on-screen instructions to fix activation issues.</li>
+</ol>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Is error 0xC004F074 related to KMS activation?</h3>
+<p>Yes. This error mostly appears on systems using KMS activation when the server cannot be reached.</p>
+
+<h3>Can incorrect time really block Windows activation?</h3>
+<p>Yes. Activation uses secure authentication that depends on correct date and time.</p>
+
+<h3>Will reinstalling Windows fix this error?</h3>
+<p>Usually not required. The issue can be fixed using the methods above without reinstalling Windows.</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="errorcodes5.html">Fix Windows Store Error Code 0x80073D05</a></li>
+  <li><a href="window1.html">Fix Windows Update Errors</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

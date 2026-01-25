@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Reduce High CPU Usage in Windows</title>
+
+<meta name="description" content="Learn how to reduce high CPU usage in Windows using proven methods like disabling background apps, fixing system services, scanning malware, and optimizing settings.">
+<meta name="keywords" content="high CPU usage Windows, Windows CPU usage fix, CPU 100% Windows, reduce CPU usage, Windows slow CPU">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Windows</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Reduce High CPU Usage in Windows</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+High CPU usage in Windows usually happens when background apps, system services, or faulty processes consume too much processing power. You can reduce CPU usage by identifying resource-hungry programs, disabling unnecessary startup items, fixing Windows services, scanning for malware, and optimizing system settings. These steps can restore smooth performance without reinstalling Windows.
+</p>
+
+<hr>
+
+<h2>❓ What Causes High CPU Usage in Windows?</h2>
+<p>
+High CPU usage doesn’t always mean your processor is weak. In most cases, Windows is being overloaded by software rather than hardware limitations. Understanding the cause makes it easier to fix the problem permanently.
+</p>
+
+<ul>
+  <li>Background applications running continuously</li>
+  <li>Too many startup programs</li>
+  <li>Windows services stuck in a loop</li>
+  <li>Outdated or buggy drivers</li>
+  <li>Malware or unwanted programs</li>
+  <li>Windows Update or indexing issues</li>
+</ul>
+
+<hr>
+
+<h2>🔍 Step 1: Identify the Process Using High CPU</h2>
+<p>
+Before making changes, it’s important to see what’s actually causing high CPU usage.
+</p>
+
+<ol>
+  <li>Press <strong>Ctrl + Shift + Esc</strong> to open Task Manager.</li>
+  <li>Click the <strong>CPU</strong> column to sort processes by usage.</li>
+  <li>Identify apps or services using unusually high CPU.</li>
+</ol>
+
+<p>
+If a third-party app is consuming excessive CPU even when idle, it may be poorly optimized or malfunctioning.
+</p>
+
+<hr>
+
+<h2>🚀 Step 2: Disable Unnecessary Startup Programs</h2>
+<p>
+Many programs start automatically with Windows and continue running in the background, increasing CPU usage even when not in use.
+</p>
+
+<ol>
+  <li>Open <strong>Task Manager</strong>.</li>
+  <li>Go to the <strong>Startup</strong> tab.</li>
+  <li>Right-click non-essential programs and select <strong>Disable</strong>.</li>
+</ol>
+
+<p>
+This can significantly reduce CPU load during startup and daily use.
+</p>
+
+<hr>
+
+<h2>🧹 Step 3: Close Background Apps and Processes</h2>
+<p>
+Some applications keep running in the background after you close their main window.
+</p>
+
+<ul>
+  <li>Check Task Manager for apps using CPU unnecessarily.</li>
+  <li>End tasks that you don’t recognize or no longer need.</li>
+  <li>Avoid force-closing essential Windows processes.</li>
+</ul>
+
+<p>
+Reducing background processes helps your CPU focus on tasks you actually care about.
+</p>
+
+<hr>
+
+<h2>⚙️ Step 4: Fix Windows Services Causing High CPU</h2>
+<p>
+Certain Windows services, such as Windows Search or Windows Update, can occasionally cause high CPU usage.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>services.msc</strong>, and press Enter.</li>
+  <li>Locate services like <strong>Windows Search</strong>.</li>
+  <li>Right-click → <strong>Restart</strong> or temporarily stop to test.</li>
+</ol>
+
+<p>
+If CPU usage drops after stopping a service, you’ve found the cause.
+</p>
+
+<hr>
+
+<h2>🔄 Step 5: Update Windows and Drivers</h2>
+<p>
+Outdated Windows builds or drivers can cause CPU spikes due to bugs or compatibility issues.
+</p>
+
+<ul>
+  <li>Go to <strong>Settings → Windows Update</strong>.</li>
+  <li>Install all available updates.</li>
+  <li>Update graphics, chipset, and network drivers.</li>
+</ul>
+
+<p>
+Driver updates often improve performance and reduce unnecessary CPU usage.
+</p>
+
+<hr>
+
+<h2>🛡 Step 6: Scan for Malware and Unwanted Software</h2>
+<p>
+Malware often runs hidden processes that consume CPU resources continuously.
+</p>
+
+<ol>
+  <li>Open <strong>Windows Security</strong>.</li>
+  <li>Go to <strong>Virus & threat protection</strong>.</li>
+  <li>Run a <strong>Full scan</strong>.</li>
+</ol>
+
+<p>
+Removing malware can instantly fix high CPU usage problems.
+</p>
+
+<hr>
+
+<h2>💻 Step 7: Adjust Power and Performance Settings</h2>
+<p>
+Incorrect power settings can cause the CPU to work inefficiently.
+</p>
+
+<ol>
+  <li>Open <strong>Control Panel → Power Options</strong>.</li>
+  <li>Select <strong>Balanced</strong> or <strong>High performance</strong>.</li>
+</ol>
+
+<p>
+This allows the CPU to scale performance properly when needed.
+</p>
+
+<hr>
+
+<h2>🧠 Step 8: Reduce Visual Effects</h2>
+<p>
+Animations and visual effects can slightly increase CPU usage, especially on older systems.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong>, type <strong>sysdm.cpl</strong>.</li>
+  <li>Go to <strong>Advanced → Performance Settings</strong>.</li>
+  <li>Select <strong>Adjust for best performance</strong>.</li>
+</ol>
+
+<p>
+This makes Windows more responsive and lighter on system resources.
+</p>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Is 100% CPU usage dangerous?</h3>
+<p>
+Short spikes are normal, but constant 100% usage can cause overheating and performance issues.
+</p>
+
+<h3>Should I end system processes?</h3>
+<p>
+No. Ending critical system processes can crash Windows. Only stop processes you recognize.
+</p>
+
+<h3>Will resetting Windows fix high CPU usage?</h3>
+<p>
+In extreme cases, yes—but most issues can be fixed using the steps above without resetting.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="device4.html">Fix High RAM Usage and Optimize Memory</a></li>
+  <li><a href="window4.html"> Repair Corrupted System Files</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

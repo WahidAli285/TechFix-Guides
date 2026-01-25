@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Android Phone Not Charging</title>
+
+<meta name="description" content="Android phone not charging? Learn how to fix charging errors, cable issues, battery calibration, and fast charging problems.">
+<meta name="keywords" content="android not charging, phone not charging, fast charging not working, charging cable problem, battery calibration">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Android</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix Android Phone Not Charging (Cable, Port, Battery & Fast Charging)</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      If your Android phone is not charging, the issue is usually caused by a faulty cable, dirty charging port,
+      incompatible charger, or battery problems.  
+      The fastest fixes are to clean the port, try a different cable/charger, reboot the phone, and check for software issues.
+      In most cases, you can fix it without replacing the battery.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Android Phones Stop Charging?</h2>
+    <p>
+      Charging problems can happen suddenly. Sometimes your phone shows the charging icon, but the battery percentage does not increase.
+      Other times, it may not show any sign of charging at all.
+    </p>
+
+    <p>
+      Common reasons include:
+    </p>
+
+    <ul>
+      <li>Dirty or damaged charging port</li>
+      <li>Faulty charging cable or adapter</li>
+      <li>Battery health issues or overheating</li>
+      <li>Software bugs or system glitches</li>
+      <li>Fast charging not working due to incompatible charger</li>
+    </ul>
+
+    <p>
+      Let’s fix it step-by-step.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Check and Replace Charging Cable & Adapter</h2>
+    <p>
+      A damaged cable or adapter is the most common cause.
+      Even if the cable looks fine, the internal wires can be broken.
+    </p>
+
+    <ol>
+      <li>Try using another USB cable (preferably the original one).</li>
+      <li>Use a different wall adapter (5V/2A or higher for fast charging).</li>
+      <li>Test charging on another phone to confirm the charger works.</li>
+      <li>Avoid charging from laptop USB ports (low power).</li>
+    </ol>
+
+    <p><strong>Tip:</strong> If your cable is bent or has visible damage, replace it immediately.</p>
+
+    <p><strong>Screenshot:</strong> Example of a damaged USB cable.</p>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Clean the Charging Port</h2>
+    <p>
+      Dust and lint can accumulate inside the charging port and block the connection.
+      Cleaning the port often fixes charging issues.
+    </p>
+
+    <ol>
+      <li>Turn off your phone.</li>
+      <li>Use a toothpick or a soft brush to gently remove lint.</li>
+      <li>Do not use metal objects to avoid damage.</li>
+      <li>After cleaning, try charging again.</li>
+    </ol>
+
+    <p>
+      If your phone still won’t charge, move to the next step.
+    </p>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Restart Phone & Check for Software Glitches</h2>
+    <p>
+      Sometimes charging issues are caused by software bugs.
+      Restarting the phone refreshes the system and often fixes the problem.
+    </p>
+
+    <ol>
+      <li>Press and hold the power button.</li>
+      <li>Tap <strong>Restart</strong> or <strong>Reboot</strong>.</li>
+      <li>After reboot, plug in the charger and check if it charges.</li>
+    </ol>
+
+    <p>
+      If the phone still shows no charging, continue with the next step.
+    </p>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Check Battery Health & Avoid Overheating</h2>
+    <p>
+      If the battery is old or damaged, it may not charge properly.
+      Overheating also prevents charging and can slow down the process.
+    </p>
+
+    <ul>
+      <li>Remove phone case while charging to reduce heat.</li>
+      <li>Avoid charging while playing heavy games or using GPS.</li>
+      <li>Check battery health (if your phone supports it).</li>
+      <li>If battery health is below 80%, consider battery replacement.</li>
+    </ul>
+
+    <p>
+      If the battery is failing, charging will be slow or inconsistent.
+    </p>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Enable Fast Charging (If Supported)</h2>
+    <p>
+      Fast charging may not work if the setting is turned off or the charger is incompatible.
+      Enabling fast charging helps if your phone supports it.
+    </p>
+
+    <ol>
+      <li>Go to <strong>Settings → Battery → Charging</strong>.</li>
+      <li>Enable <strong>Fast Charging</strong> or <strong>Quick Charge</strong>.</li>
+      <li>Use the original fast charger.</li>
+      <li>Check if charging speed improves.</li>
+    </ol>
+
+    <p>
+      If fast charging still doesn’t work, your charger or cable may not support it.
+    </p>
+
+    <hr>
+
+    <!-- FIX 6 -->
+    <h2>🔧 Fix 6: Factory Reset (Last Option)</h2>
+    <p>
+      If none of the steps work, the issue may be due to a software corruption.
+      Factory reset can fix this, but it will delete your data.
+    </p>
+
+    <ol>
+      <li>Backup your important files and photos.</li>
+      <li>Go to <strong>Settings → System → Reset options</strong>.</li>
+      <li>Tap <strong>Erase all data (factory reset)</strong>.</li>
+      <li>Confirm and wait for the process to complete.</li>
+    </ol>
+
+    <p>
+      After reset, try charging again. If it still fails, the problem is likely hardware.
+    </p>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Why does my phone charge slowly even with a good charger?</h3>
+    <p>
+      Slow charging can happen due to a damaged cable, overheating, or battery health issues.
+      Using the original fast charger and a good cable usually fixes it.
+    </p>
+
+    <h3>Can a phone charge with a damaged port?</h3>
+    <p>
+      It may charge intermittently, but the port can get damaged further.
+      If the port is loose or broken, get it repaired.
+    </p>
+
+    <h3>Is it safe to charge overnight?</h3>
+    <p>
+      Yes, most modern phones have protection circuits.
+      But avoid charging in hot environments and use a good quality charger.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="android8.html">How to Speed Up a Slow Android PhoneHow to Recover Deleted Files on Android</a></li>
+      <li><a href="android7.html">Fix Android Camera Not Working</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

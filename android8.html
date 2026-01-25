@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Recover Deleted Files on Android</title>
+
+<meta name="description" content="Learn how to recover deleted photos, videos, and documents on Android using Google Drive backup, recycle bin, and recovery apps.">
+<meta name="keywords" content="recover deleted files android, recover deleted photos android, google drive restore, android file recovery">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+ <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Android</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Recover Deleted Files on Android</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      If you accidentally deleted photos, videos, or documents on Android, you can recover them using:
+      the Recycle Bin, Google Photos Trash, Google Drive Backup, or recovery apps.
+      In most cases, deleted files can be restored within 30 days using the Trash feature.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Deleted Files Can Still Be Recovered?</h2>
+    <p>
+      When you delete a file on Android, it is not permanently removed immediately.
+      Instead, it goes to Trash or Recycle Bin (depending on the app).
+      This gives you a chance to recover it before it is permanently deleted.
+    </p>
+
+    <p>
+      However, if the file is removed from Trash or the phone storage is overwritten,
+      recovery becomes difficult. That’s why you should act fast.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Recover from Google Photos Trash</h2>
+    <p>
+      Google Photos keeps deleted photos and videos in Trash for 60 days.
+    </p>
+
+    <ol>
+      <li>Open <strong>Google Photos</strong>.</li>
+      <li>Tap <strong>Library → Trash</strong>.</li>
+      <li>Select the deleted photos or videos.</li>
+      <li>Tap <strong>Restore</strong>.</li>
+    </ol>
+
+    <p>
+      The restored files will return to the original folder and show in your gallery.
+    </p>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Recover from File Manager Trash</h2>
+    <p>
+      Many phones (Samsung, Xiaomi, OnePlus) have a built-in Recycle Bin inside the File Manager.
+    </p>
+
+    <ol>
+      <li>Open <strong>File Manager</strong>.</li>
+      <li>Go to <strong>Trash / Recycle Bin</strong>.</li>
+      <li>Select the deleted files.</li>
+      <li>Tap <strong>Restore</strong>.</li>
+    </ol>
+
+    <p>
+      This method works for documents, videos, and downloaded files.
+    </p>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Restore from Google Drive Backup</h2>
+    <p>
+      If you enabled Google Drive backup, your photos and documents may be saved automatically.
+    </p>
+
+    <ol>
+      <li>Open <strong>Google Drive</strong>.</li>
+      <li>Tap <strong>My Drive</strong>.</li>
+      <li>Search for the deleted file.</li>
+      <li>Tap <strong>Download</strong> or <strong>Restore</strong>.</li>
+    </ol>
+
+    <p>
+      If you use Google Drive Backup, always check the backup folder first.
+    </p>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Use a Recovery App (DiskDigger / EaseUS)</h2>
+    <p>
+      If the file is not in Trash or backup, you can use recovery apps.
+      These apps scan the storage for deleted files and recover them.
+    </p>
+
+    <ol>
+      <li>Install <strong>DiskDigger</strong> or <strong>EaseUS MobiSaver</strong> from Play Store.</li>
+      <li>Open the app and grant storage permission.</li>
+      <li>Select the storage to scan.</li>
+      <li>Choose the files and tap <strong>Recover</strong>.</li>
+    </ol>
+
+    <p>
+      Recovery apps work best when used immediately after deletion.
+    </p>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Recover from PC Using Software</h2>
+    <p>
+      If you can’t recover on your phone, connect it to PC and use recovery software.
+    </p>
+
+    <ol>
+      <li>Connect your phone to PC using a USB cable.</li>
+      <li>Enable <strong>File Transfer</strong>.</li>
+      <li>Use software like <strong>Recuva</strong> or <strong>Dr.Fone</strong>.</li>
+      <li>Scan the phone storage and recover files.</li>
+    </ol>
+
+    <p>
+      This method is more powerful but requires a PC.
+    </p>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>How long can I recover deleted files on Android?</h3>
+    <p>
+      Most apps keep deleted files in Trash for 30–60 days. After that, they are permanently deleted.
+    </p>
+
+    <h3>Can I recover files after clearing Trash?</h3>
+    <p>
+      It becomes difficult because the storage space is freed. Recovery apps may still help if the data is not overwritten.
+    </p>
+
+    <h3>Is it safe to use recovery apps?</h3>
+    <p>
+      Yes, but always use trusted apps from Google Play Store and avoid granting unnecessary permissions.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="android6.html">How to Fix Android Phone Slow Performance</a></li>
+      <li><a href="howto7.html"> Troubleshoot Software Issues</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+<script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script>
+</body>
+</html>

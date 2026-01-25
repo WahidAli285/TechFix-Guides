@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Reset Software Settings to Default in Windows 10 & 11</title>
+
+<meta name="description" content="Learn how to reset software settings to default in Windows 10 & 11. Fix app errors, crashes, and performance issues without reinstalling software.">
+<meta name="keywords" content="reset software settings windows 10 11, reset app settings windows, fix software issues without reinstall">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Software</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Reset Software Settings to Default in Windows 10 & 11</h1>
+
+<!-- QUICK ANSWER -->
+<h2>✅ Quick Answer</h2>
+<p>
+If a program is crashing, behaving strangely, or not opening correctly, resetting its
+settings to default can often fix the problem. In Windows 10 and 11, you can reset apps
+from Settings, delete configuration files, or use built-in repair options without
+reinstalling the software.
+</p>
+
+<hr>
+
+<!-- PROBLEM EXPLANATION -->
+<h2>❓ Why Resetting Software Settings Fixes Problems</h2>
+<p>
+Most Windows software stores configuration data such as preferences, cache, plugins,
+and startup settings. Over time, these settings can become corrupted due to power
+failures, forced shutdowns, malware, or failed updates.
+</p>
+
+<p>
+When this happens, apps may freeze, crash, fail to launch, or behave unpredictably.
+Resetting the software settings restores the default configuration, removing faulty
+custom settings while keeping the program installed.
+</p>
+
+<hr>
+
+<!-- FIX 1 -->
+<h2>🔧 Method 1: Reset Apps Using Windows Settings</h2>
+<p>
+Windows 10 and 11 allow you to reset Microsoft Store apps easily.
+</p>
+
+<ol>
+  <li>Open <strong>Settings → Apps → Installed apps</strong></li>
+  <li>Find the problematic application</li>
+  <li>Click <strong>Advanced options</strong></li>
+  <li>Select <strong>Reset</strong></li>
+</ol>
+
+<p>
+This clears app data and restores default settings.
+</p>
+
+<hr>
+
+<!-- FIX 2 -->
+<h2>🔧 Method 2: Use Built-in Software Repair Options</h2>
+<p>
+Many desktop programs include their own repair or reset feature.
+</p>
+
+<ol>
+  <li>Open <strong>Control Panel → Programs → Programs and Features</strong></li>
+  <li>Select the software</li>
+  <li>Click <strong>Change</strong> or <strong>Repair</strong></li>
+</ol>
+
+<p>
+This option repairs corrupted configuration files automatically.
+</p>
+
+<hr>
+
+<!-- FIX 3 -->
+<h2>🔧 Method 3: Delete Configuration Files Manually</h2>
+<p>
+Some applications store settings in user folders. Deleting these forces the app to
+recreate default settings.
+</p>
+
+<ol>
+  <li>Press <strong>Windows + R</strong> and type <strong>%appdata%</strong></li>
+  <li>Find the folder related to the software</li>
+  <li>Rename or delete the folder</li>
+</ol>
+
+<p>
+Restart the application afterward.
+</p>
+
+<hr>
+
+<!-- FIX 4 -->
+<h2>🔧 Method 4: Reset Using Command Prompt (Advanced)</h2>
+<p>
+Some Windows apps can be reset using PowerShell commands.
+</p>
+
+<pre>
+Get-AppxPackage *appname* | Reset-AppxPackage
+</pre>
+
+<p>
+Replace <strong>appname</strong> with the software name.
+</p>
+
+<hr>
+
+<!-- FIX 5 -->
+<h2>🔧 Method 5: Create a New User Profile</h2>
+<p>
+If settings are deeply corrupted, creating a new user account can fix the issue.
+</p>
+
+<ul>
+  <li>Go to <strong>Settings → Accounts → Other users</strong></li>
+  <li>Create a new user account</li>
+  <li>Install and test the software</li>
+</ul>
+
+<hr>
+
+<!-- FAQ -->
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Will resetting software delete my files?</h3>
+<p>
+No. Resetting usually removes preferences and cache, not personal files.
+</p>
+
+<h3>Why does software keep breaking after reset?</h3>
+<p>
+Conflicting plugins, malware, or outdated drivers may be causing repeated corruption.
+</p>
+
+<h3>Is reset better than reinstall?</h3>
+<p>
+Yes. Resetting is faster and safer before trying a full reinstall.
+</p>
+
+<hr>
+
+<!-- INTERNAL LINKS -->
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="howto4.html">Fix Common Software Errors in Windows 10 & 11</a></li>
+  <li><a href="browser5.html">Fix Website Not Displaying Properly in Browser</a></li>
+</ul>
+
+<div class="tutorial-footer">
+Last updated: January 2026 • Techfix&Guides
+</div>
+
+</div>
+</section>
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+const toggle=document.querySelector(".toggle");
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+ toggle.textContent="☀️ Light";
+}
+toggle.onclick=()=>{
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+ toggle.textContent=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
+}
+</script>
+
+</body>
+</html>
+

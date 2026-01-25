@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Browser Extensions Not Working</title>
+
+<meta name="description" content="Browser extensions not working? Learn step-by-step fixes like enabling extensions, updating browser, clearing cache, and troubleshooting conflicts.">
+<meta name="keywords" content="browser extensions not working, fix browser add-ons, extension issues, browser troubleshooting, enable extensions">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+<section class="section">
+
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Browser</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix Browser Extensions Not Working</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Browser extensions may stop working due to disabled settings, outdated browsers, conflicting extensions, corrupted profiles, or browser crashes. To fix this, you can enable extensions, update the browser, reset the browser, clear cache, or troubleshoot conflicts one by one.
+</p>
+
+<hr>
+
+<h2>❓ Why Are My Browser Extensions Not Working?</h2>
+<p>
+Extensions enhance your browser with extra features, but sometimes they fail to function. Common reasons include disabled extensions, outdated browser versions, conflicts between multiple extensions, corrupted browser profiles, or software restrictions. Identifying the cause is key to restoring functionality.
+</p>
+
+<hr>
+
+<h2>🧹 Fix 1: Enable Disabled Extensions</h2>
+<ol>
+  <li>Open your browser and go to the Extensions/Add-ons page.</li>
+  <li>Check if the extension you need is disabled.</li>
+  <li>Toggle the switch to enable it.</li>
+  <li>Restart your browser to apply changes.</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ Fix 2: Update Your Browser</h2>
+<ol>
+  <li>Go to <strong>Settings → About Browser</strong>.</li>
+  <li>Check for updates and install the latest version.</li>
+  <li>Restart the browser to ensure extensions work properly.</li>
+</ol>
+
+<hr>
+
+<h2>🔧 Fix 3: Disable Conflicting Extensions</h2>
+<ol>
+  <li>Some extensions can conflict with others.</li>
+  <li>Disable all extensions, then enable them one by one to find the problematic one.</li>
+  <li>Remove or replace the conflicting extension.</li>
+</ol>
+
+<hr>
+
+<h2>🖥 Fix 4: Clear Browser Cache</h2>
+<ol>
+  <li>Open browser settings → Privacy & Security → Clear Browsing Data.</li>
+  <li>Select <strong>Cached images and files</strong> and <strong>Cookies</strong>.</li>
+  <li>Click <strong>Clear Data</strong> and restart the browser.</li>
+</ol>
+
+<hr>
+
+<h2>💻 Fix 5: Reset or Reinstall Browser</h2>
+<p>
+If extensions still fail, reset the browser to default settings or reinstall it. This fixes corrupted profiles or internal issues preventing extensions from running.
+</p>
+
+<hr>
+
+<h2>🦠 Fix 6: Check for Malware</h2>
+<p>
+Some malware or adware can block extensions. Run a full system antivirus scan to ensure your system is clean. Remove detected threats and restart the browser.
+</p>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Why do extensions work sometimes and not others?</h3>
+<p>
+It could be due to browser updates, conflicts with other extensions, or temporary browser glitches. Restarting the browser usually fixes temporary issues.
+</p>
+
+<h3>Do extensions affect browser performance?</h3>
+<p>
+Yes, multiple or heavy extensions can slow down the browser. Remove unused extensions to improve speed and stability.
+</p>
+
+<h3>Can resetting the browser remove my extensions?</h3>
+<p>
+Resetting usually disables extensions temporarily, but does not uninstall them. You may need to re-enable them after reset.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="window5.html">Fix Windows 10/11 Wi-Fi Problems</a></li>
+  <li><a href="browser4.html">How to Fix Browser Slow Performance</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techfix&Guides</title>
+
+<style>
+:root{
+  --bg-light:#f5f7fb;
+  --text-light:#0b1220;
+  --accent:#00d1d1;
+  --card-light:#fff;
+}
+
+/* ================= BASE ================= */
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg-light);
+  color:var(--text-light);
+  transition:.3s;
+}
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:var(--accent);
+}
+.logo a {
+  text-decoration: none;
+  color: var(--accent);   
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;         
+}
+
+.logo a:hover {
+  opacity: 0.85;            
+  text-decoration: none;   
+}
+/* ================= NAV ================= */
+nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  color:inherit;
+  font-size:16px;
+}
+
+nav a:hover{color:var(--accent);}
+
+.menu-btn{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+.hero{
+  text-align:center;
+  padding:50px 20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero h1{font-size:42px;}
+.hero span{color:var(--accent);}
+.hero p{opacity:.85;line-height:1.6;}
+
+.search-box{
+  margin-top:35px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.search-box input{
+  padding:14px;
+  width:280px;
+  border-radius:8px;
+  border:none;
+}
+
+.search-box button{
+  padding:14px 26px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ================= FEATURES ================= */
+.features{
+  margin-top:50px;
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.feature{
+  background:var(--card-light);
+  padding:20px 25px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+/* ================= SECTIONS ================= */
+.section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.section-header a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* ================= CATEGORIES ================= */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.category-link{
+  text-decoration:none;
+  color:inherit;
+}
+
+.category-card{
+  background:var(--card-light);
+  padding:25px;
+  border-radius:14px;
+  transition:.3s;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.category-card:hover{
+  transform:translateY(-5px);
+  border:1px solid var(--accent);
+}
+
+.category-icon{
+  width:42px;
+  height:42px;
+  background:rgba(0,209,209,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  margin-bottom:15px;
+  color:var(--accent);
+}
+
+/* ================= TUTORIALS ================= */
+.tutorial{
+  background:var(--card-light);
+  padding:30px;
+  border-radius:16px;
+  margin-bottom:25px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.tutorial h3 a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.badges{display:flex;gap:10px;}
+
+.badge{
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:20px;
+}
+
+.badge.category{
+  background:rgba(0,209,209,.15);
+  color:var(--accent);
+}
+
+.badge.featured{
+  background:#f5a623;
+  color:#000;
+}
+
+.tutorial-footer{
+  opacity:.7;
+  font-size:13px;
+  margin-top:15px;
+}
+
+/* ================= QUICK LINKS ================= */
+.quick-links-box{
+  background:var(--card-light);
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+/* body.dark .quick-links-box{
+  background:var(--card-dark);
+  box-shadow:none;
+} */
+
+.quick-links-list{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.quick-links-list a{
+  padding:14px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  color:inherit;
+  background:rgba(0,209,209,.1);
+}
+
+.quick-links-list a:hover{
+  background:rgba(0,209,209,.2);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#ffffff;
+  padding:50px 20px;
+  margin-top:80px;
+  border-top:1px solid rgba(0,0,0,.1);
+}
+
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.footer-left{
+  min-width:260px;
+}
+
+.footer-left h3{
+  margin-top:0;
+  color:var(--accent);
+}
+
+.footer-left p{
+  font-size:16px;
+  line-height:1.7;
+  opacity:.85;
+  max-width:400px;
+}
+
+.footer-right{
+  min-width:400px;
+}
+
+.footer-right h4{
+  margin-bottom:15px;
+  font-size:16px;
+}
+
+.footer-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.footer-links li{
+  margin-bottom:10px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:inherit;
+  font-size:14px;
+  opacity:.85;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+  opacity:1;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:35px;
+  font-size:13px;
+  opacity:.6;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media(max-width: 768px) {
+
+  .menu-btn {
+    display: block !important;
+    z-index: 5000;
+  }
+
+
+   nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    display: none;       /* hidden initially */
+    box-shadow: 4px 0 12px rgba(0,0,0,.15);
+    z-index: 3500;
+  }
+
+  nav.show {
+    display: flex !important;
+    transform: translateX(0) !important;
+  }
+
+  .card, .article-card {
+    width: 90vw !important; /* wider cards */
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero h1 {
+    font-size: 28px !important;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+  }
+  .feature{
+    width: 100%;
+     text-align: center !important;
+  }
+
+ .categories, .tutorial {
+    width: 84% !important;
+    text-align: center !important;
+  }
+
+  .footer-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-left p {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+
+  .footer-right ul {
+    align-items: center !important;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="menu-btn">☰</div>
+   <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Fix Your Tech Problems <span>Fast</span></h1>
+<p>Step-by-step tutorials and proven fixes for Windows, Android, browsers and more.</p>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search here">
+<button id="searchBtn">Search</button>
+
+</div>
+
+<div class="features">
+<div class="feature">⚡ Quick Solutions</div>
+<div class="feature">🛡 Expert Verified</div>
+<div class="feature">🔄 Updated Daily</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <h2>Browse by Category</h2>
+    <a href="category.html">View All →</a>
+  </div>
+
+  <div class="categories">
+
+    <a href="window.html" class="category-link">
+      <div class="category-card">
+        <div class="category-icon">🖥</div>
+        Windows Fixes
+      </div>
+    </a>
+
+    <a href="android.html" class="category-link">
+      <div class="category-card">
+        <div class="category-icon">📱</div>
+        Android Fixes
+      </div>
+    </a>
+
+    <a href="internet.html" class="category-link">
+      <div class="category-card">
+        <div class="category-icon">🌐</div>
+        Internet & Browser
+      </div>
+    </a>
+
+    <a href="software.html" class="category-link">
+      <div class="category-card">
+        <div class="category-icon">⚙</div>
+        Software Fixes
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<section class="section">
+<h2>Featured Tutorials</h2>
+<div class="tutorial">
+<div class="badges">
+<span class="badge category">Windows</span>
+<span class="badge featured">Featured</span>
+</div>
+<h3><a href="window3.html">Fix Windows 11 BSOD Error</a></h3>
+<p>Complete step-by-step solution for blue screen issues.</p>
+<div class="tutorial-footer">8 min read</div>
+</div>
+
+<div class="tutorial">
+<div class="badges">
+<span class="badge category">Windows</span>
+<span class="badge featured">Featured</span>
+</div>
+<h3><a href="internet2.html">Fix Slow Internet Speed</a></h3>
+<p>Complete step-by-step solution for slow internet speed.</p>
+<div class="tutorial-footer">4 min read</div>
+</div>
+
+<div class="tutorial">
+<div class="badges">
+<span class="badge category">Windows</span>
+<span class="badge featured">Featured</span>
+</div>
+<h3><a href="howto1.html">Install Software on Windows 10 & 11</a></h3>
+<p>Complete step-by-step solution for installing software.</p>
+<div class="tutorial-footer">5 min read</div>
+</div>
+
+<div class="tutorial">
+<div class="badges">
+<span class="badge category">Windows</span>
+<span class="badge featured">Featured</span>
+</div>
+<h3><a href="laptop7.html">Laptop Keyboard Not Working</a></h3>
+<p>Complete step-by-step solution for laptop keyword issue.</p>
+<div class="tutorial-footer">9 min read</div>
+</div>
+</section>
+
+<section class="section">
+<div class="quick-links-box">
+<h2>Quick Links</h2>
+<div class="quick-links-list">
+<a href="window1.html"> Fix Windows Update Errors</a>
+<a href="software3.html">Fix Program Crashing on Startup</a>
+<a href="android9.html">Android Battery Drain</a>
+<a href="laptop4.html">Fix Slow Laptop Performance</a>
+<a href="tech2.html">Protect Your PC from Malware and Viruses</a>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const searchData = [
+ // Windows Articles
+  { title: "How to Fix Printer Not Working in Windows", url: "window9.html", keywords: ["printer", "windows", "fix"] },
+  { title: "Resolve Windows Black Screen Issues", url: "window8.html", keywords: ["black screen", "windows", "fix"] },
+  { title: "Fix Windows Application Crashes", url: "window7.html", keywords: ["application", "crash", "windows", "fix"] },
+  { title: "How to Recover Deleted Files in Windows", url: "window6.html", keywords: ["recover", "deleted files", "windows"] },
+  { title: "Fix Windows 10/11 Wi-Fi Problems", url: "window5.html", keywords: ["wifi", "windows", "10", "11", "fix"] },
+  { title: "How to Repair Corrupted System Files", url: "window4.html", keywords: ["repair", "system files", "corrupted", "windows"] },
+  { title: "Fix Windows Blue Screen of Death (BSOD)", url: "window3.html", keywords: ["bsod", "blue screen", "windows", "fix"] },
+  { title: "How to Speed Up a Slow Windows PC", url: "window2.html", keywords: ["speed up", "slow pc", "windows", "fix"] },
+  { title: "How to Fix Windows Update Errors", url: "window1.html", keywords: ["windows update", "error", "fix"] },
+
+  // Android
+  { title: "How to Fix Android Battery Draining Fast", url:"android9.html", keywords:["android","battery","draining","fix"] },
+  { title: "How to Recover Deleted Files on Android", url:"android8.html", keywords:["android","recover","deleted files","fix"] },
+  { title: "How to Fix Android Camera Not Working", url:"android7.html", keywords:["android","camera","fix"] },
+  { title: "How to Fix Android Phone Slow Performance", url:"android6.html", keywords:["android","slow","performance","fix"] },
+  { title: "How to Fix Android Bluetooth Not Working", url:"android5.html", keywords:["android","bluetooth","fix"] },
+  { title: "How to Fix Android Wi-Fi Connection Problems", url:"android4.html", keywords:["android","wifi","connection","fix"] },
+  { title: "How to Fix Android Apps Crashing or Not Responding", url:"android3.html", keywords:["android","apps","crash","fix"] },
+  { title: "How to Solve Android Overheating Issues", url:"android2.html", keywords:["android","overheating","fix"] },
+  { title: "How to Fix Android Phone Not Charging", url:"android1.html", keywords:["android","charging","fix"] },
+
+  // Internet
+  { title: "How to Fix Internet Proxy Errors", url:"internet9.html", keywords:["internet","proxy","error","fix"] },
+  { title: "How to Fix Limited Connectivity Error", url:"internet8.html", keywords:["internet","limited connectivity","error","fix"] },
+  { title: "How to Fix Router Not Working or Not Responding", url:"internet7.html", keywords:["router","internet","fix"] },
+  { title: "How to Fix Internet Dropping Frequently", url:"internet6.html", keywords:["internet","dropping","fix"] },
+  { title: "How to Fix Wi-Fi Connected But No Internet", url:"internet5.html", keywords:["wifi","no internet","fix"] },
+  { title: "How to Fix DNS Server Not Responding", url:"internet4.html", keywords:["dns","server","fix"] },
+  { title: "How to Fix Wi-Fi Not Connecting on Android or iPhone", url:"internet3.html", keywords:["wifi","android","iphone","fix"] },
+  { title: "How to Fix Slow Internet Speed", url:"internet2.html", keywords:["internet","slow","speed","fix"] },
+  { title: "How to Fix No Internet Access on Windows", url:"internet1.html", keywords:["windows","internet","no access","fix"] },
+
+  // Software / HowTo
+  { title: "How to Fix Corrupted Application Files Error", url: "software9.html", keywords:["software","corrupted","application","fix"] },
+  { title: "How to Fix Software Compatibility Issues in Windows", url: "software8.html", keywords:["software","compatibility","windows","fix"] },
+  { title: "How to Fix Access Is Denied Error While Installing Software", url: "software7.html", keywords:["software","access denied","installing","fix"] },
+  { title: "How to Fix This App Can’t Run on Your PC Error", url: "software6.html", keywords:["software","app","cannot run","fix"] },
+  { title: "How to Fix DLL File Missing Error", url: "software5.html", keywords:["software","dll","missing","fix"] },
+  { title: "How to Fix Setup Installation Failed Error", url: "software4.html", keywords:["software","setup","installation failed","fix"] },
+  { title: "How to Fix Program Crashing on Startup", url: "software3.html", keywords:["software","program","crash","startup","fix"] },
+  { title: "How to Fix Application Not Opening in Windows", url: "software2.html", keywords:["software","application","not opening","fix"] },
+  { title: "How to Fix Software Not Responding Error", url: "software1.html", keywords:["software","not responding","fix"] },
+  { title: "How to Reset Software Settings to Default in Windows 10 & 11", url: "howto9.html", keywords:["software","reset","default","windows","fix"] },
+  { title: "How to Repair Corrupted Software Files in Windows Without Reinstalling", url: "howto8.html", keywords:["software","repair","corrupted","windows","fix"] },
+  { title: "How to Troubleshoot Software Issues Step by Step in Windows", url: "howto7.html", keywords:["software","troubleshoot","windows","fix"] },
+  { title: "How to Check Software Compatibility Before Installing on Windows", url: "howto6.html", keywords:["software","check","compatibility","windows","fix"] },
+  { title: "How to Improve Software Performance and Speed on Windows PC", url: "howto5.html", keywords:["software","performance","speed","windows","fix"] },
+  { title: "How to Fix Common Software Errors in Windows 10 & 11", url: "howto4.html", keywords:["software","common errors","windows","fix"] },
+  { title: "How to Update Software Manually and Automatically on Windows", url: "howto3.html", keywords:["software","update","windows","fix"] },
+  { title: "How to Uninstall Programs Completely in Windows", url: "howto2.html", keywords:["software","uninstall","windows","fix"] },
+  { title: "How to Install Software on Windows 10 & 11 Without Errors", url: "howto1.html", keywords:["software","install","windows","fix"] },
+
+  // Laptop
+  { title: "How to Fix PC Automatically Restarting Problem", url:"laptop9.html", keywords:["laptop","pc","restart","problem","fix"] },
+  { title: "How to Fix Laptop Touchpad Not Working", url:"laptop8.html", keywords:["laptop","touchpad","fix"] },
+  { title: "How to Fix Laptop Keyboard Not Working", url:"laptop7.html", keywords:["laptop","keyboard","fix"] },
+  { title: "How to Fix Black Screen Issue on Laptop or PC", url:"laptop6.html", keywords:["laptop","pc","black screen","fix"] },
+  { title: "How to Fix Laptop Battery Draining Fast", url:"laptop5.html", keywords:["laptop","battery","draining","fix"] },
+  { title: "How to Fix Slow Laptop Performance", url:"laptop4.html", keywords:["laptop","slow","performance","fix"] },
+  { title: "How to Fix Laptop Overheating Problem", url:"laptop3.html", keywords:["laptop","overheating","fix"] },
+  { title: "How to Fix PC Freezing or Hanging Frequently", url:"laptop2.html", keywords:["laptop","pc","freezing","fix"] },
+  { title: "How to Fix Laptop Not Turning On", url:"laptop1.html", keywords:["laptop","not turning on","fix"] },
+
+  // Browser
+  { title: "How to Fix Browser Redirecting to Wrong Websites", url:"browser9.html", keywords:["browser","redirecting","wrong website","fix"] },
+  { title: "How to Fix Browser Showing Blank Page", url:"browser8.html", keywords:["browser","blank page","fix"] },
+  { title: "How to Fix Browser Extensions Not Working", url:"browser7.html", keywords:["browser","extensions","fix"] },
+  { title: "How to Fix Browser Keeps Freezing", url:"browser6.html", keywords:["browser","freezing","fix"] },
+  { title: "How to Fix Website Not Displaying Properly in Browser", url:"browser5.html", keywords:["browser","website","display","fix"] },
+  { title: "How to Fix Browser Slow Performance", url:"browser4.html", keywords:["browser","slow","performance","fix"] },
+  { title: "How to Fix Browser Crashing Frequently", url:"browser3.html", keywords:["browser","crash","fix"] },
+  { title: "How to Fix Browser Pages Not Loading", url:"browser2.html", keywords:["browser","pages","not loading","fix"] },
+  { title: "How to Fix Browser Not Opening Issue", url:"browser1.html", keywords:["browser","not opening","fix"] },
+
+  // Error Codes
+  { title: "How to Fix Windows Activation Error Code 0xC004F074", url:"errorcodes9.html", keywords:["windows","activation","error code","0xC004F074","fix"] },
+  { title: "How to Fix Printer Error Code 0x0000011B", url:"errorcodes8.html", keywords:["printer","error code","0x0000011B","fix"] },
+  { title: "How to Fix Device Manager Error Code 43", url:"errorcodes7.html", keywords:["device manager","error code","43","fix"] },
+  { title: "How to Fix Error Code 0xC0000005 in Windows", url:"errorcodes6.html", keywords:["error code","0xC0000005","windows","fix"] },
+  { title: "How to Fix Windows Store Error Code 0x80073D05", url:"errorcodes5.html", keywords:["windows store","error code","0x80073D05","fix"] },
+  { title: "How to Fix Blue Screen Error Code 0x0000007B", url:"errorcodes4.html", keywords:["blue screen","error code","0x0000007B","fix"] },
+  { title: "How to Fix Error Code 0x80004005 in Windows", url:"errorcodes3.html", keywords:["error code","0x80004005","windows","fix"] },
+  { title: "How to Fix Windows Update Error Code 0x80070422", url:"errorcodes2.html", keywords:["windows update","error code","0x80070422","fix"] },
+  { title: "How to Fix Windows Error Code 0x80070057", url:"errorcodes1.html", keywords:["windows","error code","0x80070057","fix"] },
+
+  // Device
+  { title: "How to Optimize Windows for Gaming Performance", url:"device9.html", keywords:["windows","gaming","performance","optimize","fix"] },
+  { title: "How to Reduce System Lag and Improve Responsiveness", url:"device8.html", keywords:["system","lag","performance","fix"] },
+  { title: "How to Optimize Startup Programs in Windows", url:"device7.html", keywords:["startup programs","windows","optimize","fix"] },
+  { title: "How to Improve Battery Life on Laptop", url:"device6.html", keywords:["battery","laptop","improve","fix"] },
+  { title: "How to Optimize Disk Usage and Improve Storage Performance", url:"device5.html", keywords:["disk","storage","performance","optimize","fix"] },
+  { title: "How to Fix High RAM Usage and Optimize Memory", url:"device4.html", keywords:["ram","memory","high usage","fix"] },
+  { title: "How to Reduce High CPU Usage in Windows", url:"device3.html", keywords:["cpu","windows","high usage","fix"] },
+  { title: "How to Speed Up Laptop Without Upgrading Hardware", url:"device2.html", keywords:["speed up","laptop","fix"] },
+  { title: "How to Optimize Windows PC for Better Performance", url:"device1.html", keywords:["windows","optimize","performance","fix"] },
+
+  // Tech / Safety
+  { title: "How to Keep Your System Safe While Downloading Software", url:"tech9.html", keywords:["system","safe","software","download","fix"] },
+  { title: "How to Enable Firewall and Security Settings in Windows", url:"tech8.html", keywords:["firewall","security","windows","fix"] },
+  { title: "How to Create Strong Passwords and Manage Them Securely", url:"tech7.html", keywords:["password","security","fix"] },
+  { title: "How to Stay Safe from Phishing Attacks", url:"tech6.html", keywords:["phishing","security","fix"] },
+  { title: "How to Protect Personal Data on Windows PC", url:"tech5.html", keywords:["personal data","windows","security","fix"] },
+  { title: "How to Secure Your Laptop from Unauthorized Access", url:"tech4.html", keywords:["laptop","security","unauthorized access","fix"] },
+  { title: "Best Online Safety Tips for Secure Internet Browsing", url:"tech3.html", keywords:["internet","security","safe","fix"] },
+  { title: "How to Protect Your PC from Malware and Viruses", url:"tech2.html", keywords:["malware","virus","pc","fix"] },
+  { title: "Essential Tech Safety Tips Every Computer User Should Know", url:"tech1.html", keywords:["tech","safety","fix"] },
+  // Home
+  { title: "Home", url:"index.html", keywords:["home","index","start"] },
+  { title: "Category", url:"category.html", keywords:["classification","category","categories","kind"] },
+  { title: "Latest", url:"latest.html", keywords:["latest","fresh","new","uptodate"] },
+  { title: "About", url:"about.html", keywords:["about","vision","story"] },
+  { title: "Contact", url:"contact.html", keywords:["get in touch","feedback","contact","inquiries","support"] },
+  { title: "Policy & Terms", url:"policy.html", keywords:["strategy","policy","privacy","terms","conditions"] }
+  
+];
+
+// Search function
+const input = document.getElementById("searchInput");
+const btn = document.getElementById("searchBtn");
+
+function searchSite() {
+  const q = input.value.toLowerCase().trim();
+  if (!q) return;
+
+  for (let item of searchData) {
+    if (
+      item.title.toLowerCase().includes(q) ||
+      item.keywords.some(k => k.toLowerCase().includes(q))
+    ) {
+      window.location.href = item.url;
+      return;
+    }
+  }
+  alert("No result found");
+}
+
+
+btn.addEventListener("click", searchSite);
+input.addEventListener("keydown", e => { if (e.key === "Enter") searchSite(); });
+</script>
+
+
+
+<script>
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('show'));
+</script>
+
+</body>
+</html>

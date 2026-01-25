@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Android Battery Draining Fast</title>
+
+<meta name="description" content="Android battery draining fast? Learn how to find battery-hungry apps, calibrate battery, and use power-saving tips to improve battery life.">
+<meta name="keywords" content="android battery draining fast, battery drain fix, battery calibration, power saving android, android battery tips">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+  <div class="tutorial">
+    <div class="badges">
+      <span class="badge category">Android</span>
+      <span class="badge featured">Featured</span>
+    </div>
+
+    <h1>How to Fix Android Battery Draining Fast</h1>
+
+    <!-- QUICK ANSWER -->
+    <h2>✅ Quick Answer</h2>
+    <p>
+      Android battery draining fast is usually caused by background apps, high screen brightness,
+      outdated software, or a failing battery. To fix it, check battery usage, disable battery-hungry apps,
+      enable power saving, update Android, and calibrate the battery. In most cases, these steps improve battery life quickly.
+    </p>
+
+    <hr>
+
+    <!-- PROBLEM EXPLANATION -->
+    <h2>❓ Why Is Your Android Battery Draining Fast?</h2>
+    <p>
+      Battery drain is one of the most common Android problems. It can happen suddenly after a software update,
+      after installing a new app, or when the battery is old. Many users notice that their phone battery drops
+      from 80% to 40% within an hour, even when the phone is idle.
+    </p>
+
+    <p>
+      The main reasons are apps running in the background, excessive screen brightness, constant Wi-Fi scanning,
+      location services, and outdated system software. In rare cases, a faulty battery or a damaged charging port
+      can also cause fast battery drain.
+    </p>
+
+    <hr>
+
+    <!-- FIX 1 -->
+    <h2>🔧 Fix 1: Check Battery Usage & Identify Battery-Hungry Apps</h2>
+    <p>
+      The first step is to find which apps are consuming the most battery.
+    </p>
+
+    <ol>
+      <li>Open <strong>Settings</strong>.</li>
+      <li>Go to <strong>Battery → Battery Usage</strong>.</li>
+      <li>Look for apps that use high battery percentage.</li>
+      <li>Tap the app and choose <strong>Force Stop</strong> or <strong>Restrict</strong>.</li>
+    </ol>
+
+    <p>
+      Common battery-draining apps include social media apps, video streaming, and navigation apps.
+      If an app is using battery even when you’re not using it, it is the main cause.
+    </p>
+
+    <hr>
+
+    <!-- FIX 2 -->
+    <h2>🔧 Fix 2: Disable Background Apps & Enable Battery Optimization</h2>
+    <p>
+      Many apps run in the background even when you are not using them. Disabling background activity helps save battery.
+    </p>
+
+    <ol>
+      <li>Go to <strong>Settings → Apps</strong>.</li>
+      <li>Select the app you want to restrict.</li>
+      <li>Tap <strong>Battery</strong>.</li>
+      <li>Enable <strong>Battery Optimization</strong> or <strong>Background Restriction</strong>.</li>
+    </ol>
+
+    <p>
+      This prevents the app from running in the background and reduces battery usage significantly.
+    </p>
+
+    <hr>
+
+    <!-- FIX 3 -->
+    <h2>🔧 Fix 3: Reduce Screen Brightness & Disable Always-On Display</h2>
+    <p>
+      Screen brightness is one of the biggest battery drains. Reducing brightness and disabling Always-On Display can increase battery life by hours.
+    </p>
+
+    <ol>
+      <li>Open <strong>Settings → Display</strong>.</li>
+      <li>Lower the brightness level.</li>
+      <li>Disable <strong>Auto-brightness</strong> if it keeps increasing.</li>
+      <li>Turn off <strong>Always-On Display</strong> (if available).</li>
+    </ol>
+
+    <p>
+      Using dark mode also helps on OLED screens because black pixels consume less power.
+    </p>
+
+    <hr>
+
+    <!-- FIX 4 -->
+    <h2>🔧 Fix 4: Turn Off Unnecessary Services (GPS, Bluetooth, Wi-Fi)</h2>
+    <p>
+      Location services, Bluetooth, and Wi-Fi can keep your phone awake and drain battery.
+    </p>
+
+    <ul>
+      <li>Turn off <strong>GPS/Location</strong> when not needed.</li>
+      <li>Disable <strong>Bluetooth</strong> if not using any device.</li>
+      <li>Turn off <strong>Wi-Fi</strong> when you are outside or not using it.</li>
+    </ul>
+
+    <p>
+      You can also enable <strong>Airplane Mode</strong> in low signal areas to prevent battery drain due to constant network searching.
+    </p>
+
+    <hr>
+
+    <!-- FIX 5 -->
+    <h2>🔧 Fix 5: Update Android System & Apps</h2>
+    <p>
+      Outdated apps and system software can cause battery issues due to bugs and compatibility problems.
+    </p>
+
+    <ol>
+      <li>Open <strong>Google Play Store</strong>.</li>
+      <li>Tap your profile icon → <strong>Manage apps & device</strong>.</li>
+      <li>Update all apps.</li>
+      <li>Go to <strong>Settings → System → Software Update</strong> and update Android.</li>
+    </ol>
+
+    <p>
+      After updating, restart your phone to apply changes properly.
+    </p>
+
+    <hr>
+
+    <!-- FIX 6 -->
+    <h2>🔧 Fix 6: Calibrate Battery (Fix Battery Percentage Errors)</h2>
+    <p>
+      Sometimes battery percentage shows wrong values. Battery calibration fixes this.
+    </p>
+
+    <ol>
+      <li>Use your phone until the battery drains to 0% and turns off.</li>
+      <li>Charge the phone to 100% without interruption.</li>
+      <li>Restart the phone.</li>
+    </ol>
+
+    <p>
+      This recalibrates the battery sensor and helps show correct battery percentage.
+    </p>
+
+    <hr>
+
+    <!-- FIX 7 -->
+    <h2>🔧 Fix 7: Use Power Saving Mode</h2>
+    <p>
+      Power Saving Mode reduces background activity and limits performance to save battery.
+    </p>
+
+    <ol>
+      <li>Open <strong>Settings → Battery</strong>.</li>
+      <li>Enable <strong>Power Saving Mode</strong>.</li>
+      <li>Set battery threshold to activate automatically (e.g., 20%).</li>
+    </ol>
+
+    <p>
+      Power saving is useful during long days when you cannot charge your phone.
+    </p>
+
+    <hr>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Why is my battery draining fast after Android update?</h3>
+    <p>
+      After updates, the system rebuilds indexes and background services run for a while.
+      Battery drain usually improves after 1–2 days.
+    </p>
+
+    <h3>Is battery calibration safe?</h3>
+    <p>
+      Yes, calibration is safe and helps fix battery percentage errors. Avoid doing it too often.
+    </p>
+
+    <h3>How can I find the worst battery draining app?</h3>
+    <p>
+      Go to <strong>Settings → Battery → Battery Usage</strong> and check the app list.
+      Force stop or uninstall apps that use high battery.
+    </p>
+
+    <hr>
+
+    <!-- INTERNAL LINKS -->
+    <h2>🔗 Related Guides</h2>
+    <ul>
+      <li><a href="browser2.html">Fix Browser Pages Not Loading</a></li>
+      <li><a href="android2.html">How to Solve Android Overheating Issues</a></li>
+    </ul>
+
+    <div class="tutorial-footer">
+      Last updated: January 2026 • Techfix&Guides
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+<!-- <script>
+  const toggle = document.querySelector(".toggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.textContent = "☀️ Light";
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "☀️ Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "🌙 Dark";
+    }
+  });
+</script> -->
+</body>
+</html>

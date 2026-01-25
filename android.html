@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Android Fixes | Techfix&Guides</title>
+<style>
+  :root {
+  --bg-dark: #0b1220;
+  --bg-light: #f5f7fb;
+  --text-dark: #fff;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-dark: #111a2e;
+  --card-light: #fff;
+}
+
+/* BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* HEADER */
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #ffffff;
+  position: relative;
+  z-index: 5000;
+} */
+ /* ================= HEADER ================= */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+body.dark header {
+  background: linear-gradient(90deg, #0b1220, #0f1c35);
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent);
+  order: 2; /* default logo right side */
+}
+
+.menu-btn {
+  display: none; /* hidden on desktop */
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  order: 1; /* left side */
+  background: none;
+  border: none;
+  color: var(--accent);
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  order: 3;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* PAGE CONTENT */
+
+.page-head {
+  max-width: 1100px;
+  margin: 70px auto 40px;
+  padding: 0 20px;
+}
+
+.page-head h1 {
+  font-size: 36px;
+}
+
+.page-head span {
+  color: var(--accent);
+}
+
+.page-head p {
+  opacity: 0.8;
+}
+
+/* ARTICLES GRID */
+.articles {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ARTICLE CARD */
+.article-card {
+  background: var(--card-light);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark .article-card {
+  background: var(--card-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.article-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.article-content h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.article-content a {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  background: #ffffff;
+  padding: 50px 20px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark footer {
+  background: linear-gradient(180deg, #0b1220, #070d18);
+  border-top: none;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 0 1 260px;
+}
+
+.footer-left h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.footer-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.85;
+  width: 180%;
+}
+
+.footer-right {
+  min-width: 400px;
+}
+
+.footer-right h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  
+ header{
+    display:flex;
+    align-items:center;
+    justify-content: space-between; /* SIMPLE & SAFE */
+  }
+
+  .menu-btn{
+    display:block;   /* button wapas aa jaye */
+    color:black;
+    font-size:28px;
+    z-index:6000;
+  }
+
+  .logo{
+    margin-left:0;   /* left chipakna band */
+    color: var(--accent);
+    text-decoration:none;
+    white-space: nowrap;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center; /* center links horizontally */
+    z-index: 4000;
+  }
+
+  nav.show {
+     gap: 0px;
+    display:flex;
+    transform: translateX(0);
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  /* PAGE HEADER */
+  .page-head {
+    margin: 50px auto 30px;
+    padding: 0 15px;
+  }
+
+  .page-head h1 {
+    font-size: 28px;
+  }
+
+  .page-head p {
+    font-size: 14px;
+  }
+
+  /* ARTICLES */
+  .articles {
+    max-width: 100%;
+    padding: 0 15px;
+    margin-bottom: 50px;
+    grid-template-columns: 1fr; /* single column */
+    gap: 16px;
+  }
+
+  /* ARTICLE CARD */
+  .article-card img {
+    height: 150px;
+  }
+
+  .article-content h3 {
+    font-size: 16px;
+  }
+
+  .article-content a {
+    font-size: 13px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    min-width: 100%;
+  }
+
+  .footer-left p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-right h4 {
+    font-size: 15px;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 25px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="menu-btn">☰</div>
+   <a href="index.html" class="logo">Techfix&Guides</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+    <!-- <div class="toggle">🌙 Dark</div> -->
+  </nav>
+</header>
+
+<!-- PAGE INTRO -->
+<div class="page-head">
+  <h1>📱 <span>Android Fixes</span></h1>
+</div>
+
+<!-- ARTICLES -->
+<section class="articles">
+
+  <div class="article-card">
+    <img src="android1.png" >
+    <div class="article-content">
+      <h3> How to Fix Android Phone Not Charging</h3>
+      <a href="android1.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android2.png" >
+    <div class="article-content">
+      <h3>How to Solve Android Overheating Issues</h3>
+      <a href="android2.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android3.png" >
+    <div class="article-content">
+      <h3>How to Fix Android Apps Crashing or Not Responding</h3>
+      <a href="android3.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android4.png" >
+    <div class="article-content">
+      <h3>How to Fix Android Wi-Fi Connection Problems</h3>
+      <a href="android4.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android5.png" >
+    <div class="article-content">
+      <h3>How to Fix Android Bluetooth Not Working</h3>
+      <a href="android5.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android6.png" >
+    <div class="article-content">
+      <h3>How to Fix Android Phone Slow Performance</h3>
+      <a href="android6.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android7.png" >
+    <div class="article-content">
+      <h3>How to Fix Android Camera Not Working</h3>
+      <a href="android7.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android8.png" >
+    <div class="article-content">
+      <h3>How to Recover Deleted Files on Android</h3>
+      <a href="android8.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="android9.png" >
+    <div class="article-content">
+      <h3>How to Fix Android Battery Draining Fast</h3>
+      <a href="android9.html">Read Full Guide →</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+           <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('show'));
+</script>
+
+</body>
+</html>

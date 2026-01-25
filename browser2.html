@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Fix Browser Pages Not Loading</title>
+
+<meta name="description" content="Browser pages not loading? Learn step-by-step fixes for Chrome, Edge, Firefox issues including cache clearing, network troubleshooting, and software fixes.">
+<meta name="keywords" content="browser pages not loading, chrome page not loading, edge page not loading, fix browser loading issue">
+
+<style>
+  :root {
+  --bg-light: #f5f7fb;
+  --text-light: #0b1220;
+  --accent: #00d1d1;
+  --card-light: #fff;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light); /* Default text color */
+}
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light); 
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); 
+}
+  .nav-links.active {
+    display: flex;
+  }
+/* Hamburger Menu */
+.menu-toggle {
+  color: black;
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 16px;
+}
+
+.tutorial {
+  background: var(--card-light);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.category {
+  background: rgba(0,209,209,.15);
+  color: var(--accent);
+}
+
+.badge.featured {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Headings */
+.tutorial h1, .tutorial h2 {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tutorial p,
+.tutorial li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light); /* Normal text color */
+}
+
+/* Links inside tutorial */
+.tutorial a {
+  color: var(--accent);
+}
+
+.tutorial a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #fff;
+  padding: 40px 16px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-left h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    gap: 0;
+  }
+
+  header {
+    justify-content: space-between; 
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .tutorial {
+    padding: 22px;
+  }
+
+  .tutorial h1 {
+    font-size: 24px;
+  }
+
+  .tutorial h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+   <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="logo"><a href="index.html">Techfix&Guides</a></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html">Categories</a>
+    <a href="latest.html">Latest</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policy.html">Policy & Terms</a>
+  </nav>
+</header>
+
+<section class="section">
+
+<div class="tutorial">
+
+<div class="badges">
+  <span class="badge category">Browser</span>
+  <span class="badge featured">Featured</span>
+</div>
+
+<h1>How to Fix Browser Pages Not Loading</h1>
+
+<h2>✅ Quick Answer</h2>
+<p>
+Browser pages may fail to load due to slow internet, corrupted cache, DNS or proxy issues, 
+firewall restrictions, malware, or outdated browser versions. You can fix this by 
+clearing cache, checking your internet connection, resetting network settings, 
+disabling extensions, and updating or reinstalling your browser.
+</p>
+
+<hr>
+
+<h2>❓ Why Are Browser Pages Not Loading?</h2>
+<p>
+When you click a link or open a website and the page fails to load, it’s a common issue 
+that can happen across Chrome, Firefox, Edge, or other browsers. Even with a stable 
+internet connection, pages may remain blank, partially load, or show a “This site 
+can’t be reached” message.
+</p>
+
+<p>
+The underlying causes can be browser-specific, system-related, or network-related. 
+Clearing cache, checking internet settings, updating the browser, and malware scans 
+usually solve the problem.
+</p>
+
+<hr>
+
+<h2>🔍 Common Symptoms</h2>
+<ul>
+  <li>Pages freeze or remain blank</li>
+  <li>Error messages like “ERR_CONNECTION_TIMED_OUT”</li>
+  <li>Some websites load but others do not</li>
+  <li>Browser keeps trying to load without success</li>
+  <li>Browser tabs crash or refresh repeatedly</li>
+</ul>
+
+<hr>
+
+<h2>🧹 Fix 1: Check Your Internet Connection</h2>
+<ol>
+  <li>Restart your modem or router</li>
+  <li>Try loading websites on another device</li>
+  <li>Use <strong>Command Prompt → ping google.com</strong> to check network response</li>
+  <li>Disable VPNs or proxy servers temporarily</li>
+</ol>
+
+<hr>
+
+<h2>🧹 Fix 2: Clear Browser Cache & Cookies</h2>
+<ol>
+  <li>Open browser settings → Privacy & Security</li>
+  <li>Choose <strong>Clear browsing data</strong></li>
+  <li>Select <strong>Cached images and files</strong> and <strong>Cookies</strong></li>
+  <li>Click <strong>Clear Data</strong></li>
+  <li>Restart the browser</li>
+</ol>
+
+<hr>
+
+<h2>🛠 Fix 3: Disable Extensions / Add-ons</h2>
+<ol>
+  <li>Open <strong>Extensions / Add-ons</strong> menu</li>
+  <li>Disable all extensions</li>
+  <li>Restart the browser</li>
+  <li>Enable extensions one by one to find the culprit</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ Fix 4: Reset Browser Settings</h2>
+<ol>
+  <li>Open browser settings</li>
+  <li>Search for <strong>Reset settings</strong> or <strong>Restore defaults</strong></li>
+  <li>Confirm reset</li>
+  <li>Restart browser and test</li>
+</ol>
+
+<hr>
+
+<h2>🖥 Fix 5: Check Firewall / Antivirus</h2>
+<ol>
+  <li>Open Windows Firewall / Antivirus software</li>
+  <li>Temporarily disable it</li>
+  <li>Check if pages load</li>
+  <li>Add browser to exceptions if needed</li>
+</ol>
+
+<hr>
+
+<h2>🖧 Fix 6: Flush DNS and Reset Network</h2>
+<ol>
+  <li>Open <strong>Command Prompt (Admin)</strong></li>
+  <li>Type <strong>ipconfig /flushdns</strong> and press Enter</li>
+  <li>Type <strong>netsh winsock reset</strong> and press Enter</li>
+  <li>Restart your PC</li>
+</ol>
+
+<hr>
+
+<h2>🔁 Fix 7: Update or Reinstall Browser</h2>
+<ol>
+  <li>Check for browser updates and install latest version</li>
+  <li>If issues persist, uninstall and reinstall the browser</li>
+  <li>Restart the system</li>
+</ol>
+
+<hr>
+
+<h2>🦠 Fix 8: Scan for Malware</h2>
+<ol>
+  <li>Open Windows Security or a trusted antivirus</li>
+  <li>Run a full system scan</li>
+  <li>Remove detected malware and restart</li>
+</ol>
+
+<hr>
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<h3>Why do some pages load but others don’t?</h3>
+<p>
+This may be due to DNS issues, website server errors, or browser extensions blocking content.
+</p>
+
+<h3>Can a slow PC cause browser pages not to load?</h3>
+<p>
+Yes, low RAM, background processes, or heavy CPU usage can affect page rendering.
+</p>
+
+<h3>Will resetting the browser delete bookmarks?</h3>
+<p>
+Most modern browsers keep bookmarks and saved passwords even after a reset.
+</p>
+
+<hr>
+
+<h2>🔗 Related Guides</h2>
+<ul>
+  <li><a href="browser5.html">Fix Website Not Displaying Properly in Browser</a></li>
+  <li><a href="tech6.html">How to Stay Safe from Phishing Attacks</a></li>
+</ul>
+
+<p><strong>Last updated:</strong> January 2026 • Techfix&Guides</p>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Techfix&Guides</h3>
+      <p>
+        Techfix&Guides is your trusted destination for step-by-step tutorials,
+        troubleshooting guides, and practical solutions for Windows, Android,
+        software, and internet-related issues. Our goal is to help you fix
+        problems fast and keep your devices running smoothly.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h4>Quick Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Policy & Terms</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Techfix&Guides. All rights reserved.
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>
