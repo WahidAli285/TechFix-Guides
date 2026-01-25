@@ -25,13 +25,13 @@ body{
 /* ================= HEADER ================= */
 header{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   padding:15px 20px;
   background:#fff;
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:3000;
 }
 
 .logo{
@@ -39,11 +39,23 @@ header{
   font-weight:bold;
   color:var(--accent);
 }
+.logo a {
+  text-decoration: none;
+  color: var(--accent);     
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;       
+}
+
+.logo a:hover {
+  opacity: 0.85;            
+  text-decoration: none;  
+}
 
 /* ================= NAV ================= */
 nav{
+  gap: 20px;
   display:flex;
-  gap:20px;
   align-items:center;
 }
 
@@ -52,11 +64,13 @@ nav a{
   color:inherit;
 }
 
-nav a:hover{color:var(--accent);}
+nav a:hover{
+  color:var(--accent);
+}
 
 /* ================= MENU BUTTON ================= */
 .menu-btn{
-  display:none;
+  display:none; 
   font-size:26px;
   cursor:pointer;
 }
@@ -117,10 +131,10 @@ nav a:hover{color:var(--accent);}
 
 /* ================= FOOTER ================= */
 footer{
-  background:#ffffff;
-  padding:50px 10px;
+  background:#fff;
+  padding:50px 20px;
   margin-top:80px;
-  border-top:1px solid rgba(0,0,0,0.1);
+  border-top:1px solid rgba(0,0,0,.1);
 }
 
 .footer-container{
@@ -152,15 +166,9 @@ footer{
   min-width:400px;
 }
 
-.footer-right h4{
-  margin-bottom:15px;
-  font-size:16px;
-}
-
 .footer-links{
   list-style:none;
   padding:0;
-  margin:0;
 }
 
 .footer-links li{
@@ -176,7 +184,6 @@ footer{
 
 .footer-links a:hover{
   color:var(--accent);
-  opacity:1;
 }
 
 .footer-bottom{
@@ -185,41 +192,69 @@ footer{
   font-size:13px;
   opacity:.6;
 }
-.logo a {
-  text-decoration: none;
-  color: var(--accent);    
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;         
-}
-
-.logo a:hover {
-  opacity: 0.85;            
-  text-decoration: none;   
-}
-
-
 /* ================= MOBILE ================= */
 @media(max-width:768px){
 
-  .menu-btn{display:block;}
+  /* ================= HEADER (WHITE NAVBAR FIX) ================= */
+  header{
+    position:relative;
+    min-height:36px;   
+    background:#fff;
+    z-index:3000;
+  }
 
+  /* ================= MENU BUTTON ================= */
+  .menu-btn{
+    display:block;
+    font-size:28px;
+    cursor:pointer;
+    user-select:none;
+    position:absolute;
+    top:22px;
+    left:20px;
+    z-index:4000;
+  }
+
+  /* ================= LOGO / SITE NAME ================= */
+  .logo{
+    position:absolute;
+    top:22px;
+    right:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:var(--accent);
+    z-index:4000;
+  }
+
+  /* ================= MOBILE NAV (SIDE MENU) ================= */
   nav{
     position:fixed;
-    top:60px;
+    top:0;
     left:0;
     width:220px;
     background:#fff;
-    padding:20px;
+    padding:40px 20px 20px;
     flex-direction:column;
     display:none;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    transform:translateX(-100%);
+    z-index:3500;
+    box-shadow:4px 0 12px rgba(0,0,0,.15);
   }
 
   nav.show{
+    gap: 0px;
     display:flex;
-    transform:translateX(0);
+     transform:translateX(0);
+  }
+
+  nav a{
+    width:100%;
+    text-align:center;
+    padding:10px 0;
+    font-size:16px;
+  }
+
+  nav a:hover{
+    color:var(--accent);
   }
 
 
@@ -232,7 +267,7 @@ footer{
   }
 
   /* FOOTER CENTERING */
-  .footer-container{
+.footer-container{
     flex-direction:column;
     align-items:center;
     text-align:center;
@@ -243,8 +278,18 @@ footer{
     margin:auto;
   }
 
-  .footer-right ul{
-    align-items:center;
+  .footer-right{
+    min-width:100%;
+  }
+
+  .footer-links li{
+    margin-bottom:8px;
+    list-style:none;
+  }
+
+  .footer-bottom{
+    font-size:12px;
+    margin-top:25px;
   }
 }
 
@@ -365,4 +410,5 @@ menuBtn.addEventListener('click', () => {
 
 </body>
 </html>
+
 
