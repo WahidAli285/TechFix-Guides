@@ -1,0 +1,298 @@
+:root{
+  /* --bg-dark:#0b1220; */
+  --bg-light:#f5f7fb;
+  /* --text-dark:#fff; */
+  --text-light:#0b1220;
+  --accent:#00d1d1;
+  /* --card-dark:#111a2e; */
+  --card-light:#fff;
+}
+
+/* ================= BASE ================= */
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg-light);   /* DEFAULT LIGHT */
+  color:var(--text-light);
+  transition:0.3s;
+}
+
+/* body.dark{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+} */
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#ffffff; /* LIGHT */
+}
+
+
+.logo{
+  position: static;
+  font-size:22px;
+  font-weight:bold;
+  color:var(--accent);
+}
+.logo a {
+  text-decoration: none;
+  color: var(--accent);     
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;         
+}
+
+.logo a:hover {
+  opacity: 0.85;            
+  text-decoration: none;  
+}
+nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+
+nav a{
+  text-decoration:none;
+  color:inherit;
+}
+
+nav a:hover{color:var(--accent);}
+
+.toggle{
+  padding:6px 10px;
+  border-radius:6px;
+  background:var(--accent);
+  color:#000;
+  cursor:pointer;
+}
+
+/* ================= MAIN CONTENT ================= */
+.section{
+  max-width:900px;
+  margin:90px auto;
+  padding:0 20px;
+}
+
+.card{
+  background:var(--card-light); /* LIGHT */
+  padding:40px;
+  border-radius:18px;
+  margin-bottom:50px;
+}
+
+/* body.dark .card{
+  background:var(--card-dark);
+} */
+
+.card h1{
+  margin-top:0;
+  font-size:32px;
+  color:var(--accent);
+}
+
+.card p,
+.card li{
+  font-size:16px;
+  line-height:1.8;
+  opacity:.9;
+}
+
+.card ul{
+  margin-top:20px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#ffffff; /* LIGHT */
+  padding:50px 20px;
+  margin-top:80px;
+  border-top:1px solid rgba(0,0,0,0.1);
+}
+
+/* body.dark footer{
+  background:linear-gradient(180deg,#0b1220,#070d18);
+  border-top:none;
+} */
+
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.footer-left{
+  flex:0;
+  min-width:260px;
+}
+
+.footer-left h3{
+  margin-top:0;
+  color:var(--accent);
+}
+
+.footer-left p{
+  font-size:16px;
+  line-height:1.7;
+  opacity:.85;
+  width:180%;
+}
+
+.footer-right{
+  min-width:400px;
+}
+
+.footer-right h4{
+  margin-bottom:15px;
+  font-size:16px;
+}
+
+.footer-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.footer-links li{
+  margin-bottom:10px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:inherit;
+  font-size:14px;
+  opacity:.85;
+  transition:.2s;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+  opacity:1;
+}
+
+/* ================= FOOTER BOTTOM ================= */
+.footer-bottom{
+  text-align:center;
+  margin-top:35px;
+  font-size:13px;
+  opacity:.6;
+}
+
+/* MOBILE */
+/* ================= MENU BUTTON - HIDDEN ON DESKTOP ================= */
+.menu-btn {
+  display: none; /* hide on desktop */
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  position: static;
+  top: 18px;
+  left: 20px;
+  z-index: 4000;
+}
+
+/* ================= MOBILE STYLES ================= */
+@media(max-width:768px){
+
+  /* ================= HEADER (WHITE NAVBAR FIX) ================= */
+  header{
+    position:relative;
+    min-height:36px;   
+    background:#fff;
+    z-index:3000;
+  }
+
+  /* ================= MENU BUTTON ================= */
+  .menu-btn{
+    display:block;
+    font-size:28px;
+    cursor:pointer;
+    user-select:none;
+    position:absolute;
+    top:22px;
+    left:20px;
+    z-index:4000;
+  }
+
+  /* ================= LOGO / SITE NAME ================= */
+  .logo{
+    position:absolute;
+    top:22px;
+    right:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:var(--accent);
+    z-index:4000;
+  }
+
+  /* ================= MOBILE NAV (SIDE MENU) ================= */
+  nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:220px;
+    background:#fff;
+    padding:80px 20px 20px;
+    flex-direction:column;
+    display:none;
+    z-index:3500;
+    overflow-y:auto; 
+  }
+
+  nav.show{
+    gap: 0px;
+    display:flex;
+     transform:translateX(0);
+  }
+
+  nav a{
+    width:100%;
+    text-align:center;
+    padding:10px 0;
+    font-size:16px;
+  }
+
+  nav a:hover{
+    color:var(--accent);
+  }
+
+  /* ================= CONTENT HEADINGS ================= */
+  .about h1,
+  .hero h1{
+    font-size:28px;
+  }
+
+  /* ================= FOOTER ================= */
+  .footer-container{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .footer-left p{
+    max-width:100%;
+    margin:auto;
+  }
+
+  .footer-right{
+    min-width:100%;
+  }
+
+  .footer-links li{
+    margin-bottom:8px;
+    list-style:none;
+  }
+
+  .footer-bottom{
+    font-size:12px;
+    margin-top:25px;
+  }
+}
