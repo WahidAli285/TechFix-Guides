@@ -305,6 +305,13 @@ footer{
   font-size:13px;
   opacity:.6;
 }
+/* Desktop ad */
+.desktop-ad {
+  display: block;
+}
+.mobile-ad {
+  display: none;
+}
 /* ================= MOBILE RESPONSIVE ================= */
 @media(max-width:768px){
 
@@ -327,7 +334,12 @@ footer{
     left:20px;
     z-index:4000;
   }
-
+ .desktop-ad {
+    display: none;
+  }
+  .mobile-ad {
+    display: block;
+  }
   /* ================= LOGO / SITE NAME ================= */
   .logo{
     position:absolute;
