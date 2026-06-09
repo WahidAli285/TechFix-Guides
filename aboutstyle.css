@@ -200,6 +200,13 @@ nav {
   gap: 20px;
   align-items: center;
 }
+/* Desktop ad */
+.desktop-ad {
+  display: block;
+}
+.mobile-ad {
+  display: none;
+}
 @media(max-width:768px){
 
   /* ================= HEADER (WHITE NAVBAR FIX) ================= */
@@ -209,7 +216,12 @@ nav {
     background:#fff;
     z-index:3000;
   }
-
+ .desktop-ad {
+    display: none;
+  }
+  .mobile-ad {
+    display: block;
+  }
   /* ================= MENU BUTTON ================= */
   .menu-btn{
     display:block;
