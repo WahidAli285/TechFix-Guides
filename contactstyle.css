@@ -197,7 +197,13 @@ footer{
   font-size:13px;
   opacity:.6;
 }
-
+/* Desktop ad */
+.desktop-ad {
+  display: block;
+}
+.mobile-ad {
+  display: none;
+}
 
 /* MOBILE */
 /* MENU BUTTON - hide on desktop by default */
@@ -221,7 +227,12 @@ footer{
     background:#fff;
     z-index:3000;
   }
-
+ .desktop-ad {
+    display: none;
+  }
+  .mobile-ad {
+    display: block;
+  }
   /* ================= MENU BUTTON ================= */
   .menu-btn{
     display:block;
