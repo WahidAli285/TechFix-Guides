@@ -237,7 +237,13 @@ body.dark footer {
   font-size: 13px;
   opacity: 0.6;
 }
-
+ /* Desktop ad */
+.desktop-ad {
+  display: block;
+}
+.mobile-ad {
+  display: none;
+}
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   
@@ -246,7 +252,12 @@ body.dark footer {
     align-items:center;
     justify-content: space-between; 
   }
-
+ .desktop-ad {
+    display: none;
+  }
+  .mobile-ad {
+    display: block;
+  }
   .menu-btn{
     display:block;   
     color:black;
