@@ -204,7 +204,13 @@ body.dark footer {
   font-size: 13px;
   opacity: 0.6;
 }
-
+/* Desktop ad */
+.desktop-ad {
+  display: block;
+}
+.mobile-ad {
+  display: none;
+}
 /* ================= MOBILE ================= */
 @media(max-width:768px) {
   .menu-toggle {
@@ -222,7 +228,12 @@ body.dark footer {
     text-decoration:none;
     white-space: nowrap;
   }
-
+ .desktop-ad {
+    display: none;
+  }
+  .mobile-ad {
+    display: block;
+  }
   .nav-links {
     position: fixed;
     top: 56px;
